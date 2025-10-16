@@ -51,7 +51,7 @@ const ErrorMain = () => {
           </main>
 
           {/* footer area */}
-          <Footer topCls="" />
+          <Footer />
           {/* footer area */}
         </div>
       </div>
