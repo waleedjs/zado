@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderSeven from "@/layouts/headers/header-seven";
+import HeaderThree from "@/layouts/headers/header";
 import PortfolioDetailsCustomLightArea from "@/components/portfolio/details/portfolio-details-custom-light-area";
-import FooterTwo from "@/layouts/footers/footer-two";
+import FooterThree from "@/layouts/footers/footer";
 // animation
 import { charAnimation, fadeAnimation, titleAnimation } from "@/utils/title-animation";
 
@@ -31,7 +31,7 @@ const PortfolioDetailsCustomLightMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderSeven />
+      <HeaderThree />
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -43,7 +43,7 @@ const PortfolioDetailsCustomLightMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>

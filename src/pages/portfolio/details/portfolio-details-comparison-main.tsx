@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderThree from "@/layouts/headers/header-eleven";
-import FooterTwo from "@/layouts/footers/footer-two";
+import HeaderThree from "@/layouts/headers/header";
+import FooterThree from "@/layouts/footers/footer";
 import Social from "@/components/social/social";
 import { Dots } from "@/components/svg";
 import Link from "next/link";
@@ -23,7 +23,7 @@ const PortfolioDetailsComparisonMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderThree cls="tp-inner-header-border"/>
+      <HeaderThree />
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -100,7 +100,7 @@ const PortfolioDetailsComparisonMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>
