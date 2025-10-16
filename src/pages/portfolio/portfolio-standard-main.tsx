@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderThree from "@/layouts/headers/header-eleven";
-import FooterTwo from "@/layouts/footers/footer-two";
+import HeaderThree from "@/layouts/headers/header";
+import FooterThree from "@/layouts/footers/footer";
 import ProjectFive from "@/components/project/project-five";
 import BigText from "@/components/big-text";
 // animation
@@ -93,7 +93,7 @@ const PortfolioStandardMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>

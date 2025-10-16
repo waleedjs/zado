@@ -10,7 +10,7 @@ const menu_data:IMenuDT[] = [
   {
     id: 2,
     title: 'About',
-    link: '/about-us',
+    link: '/about',
   },
   {
     id: 3,
@@ -24,6 +24,9 @@ const menu_data:IMenuDT[] = [
     id: 4,
     title: 'Blog',
     link: '/blog-modern',
+    dropdown_menus: [
+      { title: 'Blog Details', link: '/blog-details' },
+    ]
   },
   {
     id: 6,
@@ -55,7 +58,7 @@ export const mobile_menu_data:{
   {
     id: 2,
     title: 'About Us',
-    link: '/about-us',
+    link: '/about',
     dropdown_menus:[]
   },
   {
