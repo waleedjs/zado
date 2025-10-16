@@ -77,7 +77,7 @@ export default function FooterThree() {
                   <span><Link href="tel:+725214456">P: + 725 214 456</Link></span>
                 </div>
                 <div className="tp-footer-2-contact-item">
-                  <span><Link href="mailto:contact@liko.com">E: contact@liko.com</Link></span>
+                  <span><Link href="mailto:contact@liko.com">E: contact@zado.com</Link></span>
                 </div>
               </div>
             </div>
