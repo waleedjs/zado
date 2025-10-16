@@ -27,7 +27,7 @@ export default function HeaderThree() {
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-6 col-md-5 col-4">
                 <div className="tp-header-logo">
-                  <Link href="/" style={{ color: theme === "dark" ? 'white' : 'black', fontSize: '24px', fontWeight: 'bold' }}>
+                  <Link href="/" style={{ color: isSticky ? 'white' : theme === "dark" ? 'white' : 'black', fontSize: '24px', fontWeight: 'bold' }}>
                     ZADO
                   </Link>
                   {/* <Link href="/">
