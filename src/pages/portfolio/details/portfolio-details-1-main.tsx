@@ -9,11 +9,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderThree from "@/layouts/headers/header-eleven";
+import HeaderThree from "@/layouts/headers/header";
 import Social from "@/components/social/social";
 import { Dots, Share } from "@/components/svg";
 import { projectDetailsPin } from "@/utils/project-anim";
-import FooterTwo from "@/layouts/footers/footer-two";
+import FooterThree from "@/layouts/footers/footer";
 // animation
 import {charAnimation,titleAnimation} from "@/utils/title-animation";
 
@@ -43,7 +43,7 @@ const PortfolioDetailsOneMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderThree cls="tp-inner-header-border"/>
+      <HeaderThree />
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -127,7 +127,7 @@ const PortfolioDetailsOneMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>

@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderThree from "@/layouts/headers/header";
-import FooterThree from "@/layouts/footers/footer";
+import Header from "@/layouts/headers/header";
+import Footer from "@/layouts/footers/footer";
 import AboutUsHero from "@/components/about/about-us-hero";
 import AboutUsArea from "@/components/about/about-us-area";
 import FunFactOne from "@/components/fun-fact/fun-fact-one";
@@ -35,7 +35,7 @@ const AboutUsMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderThree />
+      <Header />
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -55,7 +55,7 @@ const AboutUsMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterThree />
+          <Footer />
           {/* footer area */}
         </div>
       </div>

@@ -13,11 +13,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderThree from "@/layouts/headers/header-eleven";
+import HeaderThree from "@/layouts/headers/header";
 import ProjectOne from "@/components/project/project-one";
 import { UpArrowThree } from "@/components/svg";
 import LineTextThree from "@/components/line-text/line-text-3";
-import FooterTwo from "@/layouts/footers/footer-two";
+import FooterThree from "@/layouts/footers/footer";
 // animation
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import Link from "next/link";
@@ -136,7 +136,7 @@ const PortfolioRandomMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>

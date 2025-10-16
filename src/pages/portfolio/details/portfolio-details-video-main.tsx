@@ -9,10 +9,10 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderThree from "@/layouts/headers/header-eleven";
+import HeaderThree from "@/layouts/headers/header";
 import Social from "@/components/social/social";
 import { Dots } from "@/components/svg";
-import FooterTwo from "@/layouts/footers/footer-two";
+import FooterThree from "@/layouts/footers/footer";
 // animation
 import { projectDetailsVideoPin } from "@/utils/project-anim";
 import Link from "next/link";
@@ -113,7 +113,7 @@ const PortfolioDetailsVideoMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="z-index-9" />
+          <Footer topCls="z-index-9" />
           {/* footer area */}
         </div>
       </div>
