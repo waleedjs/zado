@@ -66,7 +66,7 @@ export default function PortfolioDetailsCustomLightArea() {
                     <div className="project-details-1-info-wrap">
                         <div className="project-details-1-info tp_fade_bottom">
                           <span>Client</span>
-                          <h4>LikoTheme</h4>
+                          <h4>zadoTheme</h4>
                         </div>
                         <div className="project-details-1-info tp_fade_bottom">
                           <span>Date</span>

@@ -9,39 +9,30 @@ import port_3 from "@/assets/img/home-03/portfolio/port-3.jpg";
 import port_4 from "@/assets/img/home-03/portfolio/port-4.jpg";
 import port_5 from "@/assets/img/home-03/portfolio/port-5.jpg";
 import port_6 from "@/assets/img/home-03/portfolio/port-6.jpg";
-import port_7 from "@/assets/img/home-03/portfolio/port-7.jpg";
-import port_8 from "@/assets/img/home-03/portfolio/port-8.jpg";
 import Link from "next/link";
 
 // portfolio data
 const project_data = [
   {
     id: 1,
-    img_1: port_1,
-    img_2: port_2,
-    meta: "DEC 2024 . Creative",
-    title: "Pellente dapibus",
+    img_1: port_5,
+    img_2: port_6,
+    meta: "DEC 2024 . Real Estate Website",
+    title: "Real Estate Projects",
   },
   {
     id: 2,
-    img_1: port_3,
-    img_2: port_4,
-    meta: "NOV 2024 . Creative",
-    title: "Chania tourism",
+    img_1: port_1,
+    img_2: port_2,
+    meta: "AUG 2025 . Creative",
+    title: "Fashion Projects",
   },
   {
     id: 3,
-    img_1: port_5,
-    img_2: port_6,
-    meta: "OCT 2024 . Creative",
-    title: "Fashion sentence",
-  },
-  {
-    id: 4,
-    img_1: port_7,
-    img_2: port_8,
-    meta: "SEP 2024 . Creative",
-    title: "Fashion sentence",
+    img_1: port_3,
+    img_2: port_4,
+    meta: "OCT 2024 .  Responsive Design",
+    title: "Food Projects",
   },
 ];
 

@@ -1,61 +1,94 @@
-"use client";
+'use client';
 import { gsap } from "gsap";
-import React from "react";
+import React, { useEffect } from "react";
+import useScrollSmooth from '@/hooks/use-scroll-smooth';
+import { ScrollSmoother, ScrollTrigger, SplitText } from '@/plugins';
 import { useGSAP } from "@gsap/react";
-import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import Header from "@/layouts/headers/header";
-import Footer from "@/layouts/footers/footer";
-import AboutUsHero from "@/components/about/about-us-hero";
-import AboutUsArea from "@/components/about/about-us-area";
-import FunFactOne from "@/components/fun-fact/fun-fact-one";
+import HeaderThree from "@/layouts/headers/header";
+import HeroBannerTwo from "@/components/hero-banner/hero-banner-two";
+import AboutOne from "@/components/about/about-one";
+import VideoTwo from "@/components/video/video-two";
+import ServiceTwo from "@/components/service/service-two";
+import ProjectTwo from "@/components/project/project-two";
+import LineText from "@/components/line-text/line-text";
+import FooterThree from "@/layouts/footers/footer";
 // animation
-import { charAnimation, fadeAnimation, titleAnimation } from "@/utils/title-animation";
+import { bounceAnimation, heroBgAnimation, heroTitleAnim } from "@/utils/title-animation";
+import { videoAnimTwo } from "@/utils/video-anim";
+import { panelOneAnimation } from "@/utils/panel-animation";
+import { awardAnimOne } from "@/utils/award-anim";
+import { instagramAnim } from "@/utils/instagram-anim";
 import { hoverBtn } from "@/utils/hover-btn";
-import { teamMarqueAnim } from "@/utils/scroll-marque";
+import { aboutAnim } from "@/utils/about-anim";
 
-const AboutUsMain = () => {
+const HomeTwoMain = () => {
   useScrollSmooth();
+  useEffect(() => {
+    document.body.classList.add("tp-smooth-scroll");
+    return () => {
+      document.body.classList.remove("tp-smooth-scroll");
+    }
+  }, []);
 
   useGSAP(() => {
     const timer = setTimeout(() => {
-      charAnimation();
-      titleAnimation();
-      teamMarqueAnim();
-      fadeAnimation();
+      // hero animation
+      heroTitleAnim();
+      heroBgAnimation();
+      // about animation
+      aboutAnim()
+      // bounce animation
+      bounceAnimation();
+      // video anim
+      videoAnimTwo();
+      // panel animation
+      panelOneAnimation();
+      // award animation
+      awardAnimOne();
+      // instagram animation
+      instagramAnim();
       hoverBtn();
-    }, 100);
+    }, 100)
     return () => clearTimeout(timer);
   });
+
 
   return (
     <Wrapper>
       {/* header area start */}
-      <Header />
+      <HeaderThree />
       {/* header area end */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            {/* about hero */}
-            <AboutUsHero />
-            {/* about hero */}
+            {/* hero area start */}
+            <HeroBannerTwo />
+            {/* hero area end */}
 
-            {/* about area */}
-            <AboutUsArea />
-            {/* about area */}
+            {/* about area start */}
+            <AboutOne />
+            {/* about area end */}
 
-            {/* fun fact area */}
-            <FunFactOne />
-            {/* fun fact area */}
+            {/* video area start */}
+            <VideoTwo />
+            {/* video area end */}
+
+            {/* service area start */}
+            <ServiceTwo />
+            {/* service area end */}
+
+            {/* project area */}
+            <ProjectTwo />
+            {/* project area */}
           </main>
 
           {/* footer area */}
-          <Footer />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>
@@ -63,4 +96,4 @@ const AboutUsMain = () => {
   );
 };
 
-export default AboutUsMain;
+export default HomeTwoMain;

@@ -13,7 +13,7 @@ export default function AboutUsHero() {
   };
   return (
     <div
-      className="ab-inner-hero-area ab-inner-hero-bg p-relative"
+      className="ab-inner-hero-area ab-inner-hero-bg p-relative mt-100"
       style={{backgroundImage: "url(/assets/img/inner-about/hero/hero-1.jpg)"}}
     >
       <div className="breadcurmb-site d-none">
@@ -52,11 +52,7 @@ export default function AboutUsHero() {
               data-lag="0.2"
               data-stagger="0.08"
             >
-              <p>
-                Liko develops, designs & delivers websites & creative campaigns
-                that drive results,
-              </p>
-               <Link className="tp-btn-white-sm border-style" href="#">Our Story</Link>
+              
             </div>
           </div>
         </div>

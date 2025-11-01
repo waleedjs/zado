@@ -40,16 +40,16 @@ export default function BlogSidebar() {
         <div className="sidebar__widget-content">
           <ul>
             <li>
-              <Link href="/blog-modern">Branding</Link>
+              <Link href="/blog">Branding</Link>
             </li>
             <li>
-              <Link href="/blog-modern">Lifestyle</Link>
+              <Link href="/blog">Lifestyle</Link>
             </li>
             <li>
-              <Link href="/blog-modern">UI/UX Design</Link>
+              <Link href="/blog">UI/UX Design</Link>
             </li>
             <li>
-              <Link href="/blog-modern">Production</Link>
+              <Link href="/blog">Production</Link>
             </li>
           </ul>
         </div>

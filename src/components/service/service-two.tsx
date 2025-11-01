@@ -13,31 +13,31 @@ const service_accordion = [
   {
     id: 1,
     icon: ser_1,
-    title: "Branding",
-    desc: "Creating a strong brand identity is essential for fashion brands to establish themselves in the market. Our services are dedicated to helping fashion brands define their unique identity through strategic branding initiatives.",
+    title: "SEO Optimization",
+    desc: "Boost your online visibility and drive organic traffic with our expert SEO services. We implement proven strategies to improve your search engine rankings and attract qualified leads to your website.",
   },
   {
     id: 2,
     icon: ser_2,
-    title: "Identity",
-    desc: "Creating a strong brand identity is essential for fashion brands to establish themselves in the market. Our services are dedicated to helping fashion brands define their unique identity through strategic branding initiatives.",
+    title: "Social Media Marketing",
+    desc: "Engage your audience and build brand loyalty through targeted social media campaigns. Our team creates compelling content and manages your social presence across all major platforms.",
   },
   {
     id: 3,
     icon: ser_3,
-    title: "Ecommerce",
-    desc: "Creating a strong brand identity is essential for fashion brands to establish themselves in the market. Our services are dedicated to helping fashion brands define their unique identity through strategic branding initiatives.",
+    title: "Content Creation",
+    desc: "Deliver valuable content that resonates with your audience. From blog posts and videos to infographics and email newsletters, we help you establish thought leadership in your industry.",
   },
   {
     id: 4,
     icon: ser_4,
-    title: "Marketing",
-    desc: "Creating a strong brand identity is essential for fashion brands to establish themselves in the market. Our services are dedicated to helping fashion brands define their unique identity through strategic branding initiatives.",
+    title: "PPC Advertising",
+    desc: "Maximize your ROI with data-driven pay-per-click campaigns. We optimize your ads across Google, Bing, and social platforms to ensure you're reaching the right audience at the right time.",
   },
 ];
 export default function ServiceTwo() {
   return (
-    <div className="tp-service-2-area tp-service-2-pt  pb-150 z-index-5">
+    <div className="tp-service-2-area tp-service-2-pt tp-service-2-pb z-index-5">
       <div className="container container-1480">
         <div className="row">
           <div className="col-xl-8">
@@ -46,11 +46,11 @@ export default function ServiceTwo() {
                 <span>
                   <Leaf />
                 </span>
-                SERVICES
+                OUR SERVICES
               </span>
               <h4 className="tp-section-title-40">
-                Strategy, design and implementation as an effective complete
-                solution. Your authentic website as a digital customer magnet.
+                Comprehensive Digital Marketing Solutions to Boost Your Online Presence
+                and Drive Measurable Business Growth.
               </h4>
             </div>
           </div>
@@ -85,7 +85,6 @@ export default function ServiceTwo() {
                     <div
                       id={`collapse-${s.id}`}
                       className={`accordion-collapse collapse ${s.id === 1 ? "show" : ""}`}
-                      data-bs-parent="#accordionExample"
                     >
                       <div className="accordion-body">
                         <p>{s.desc}</p>

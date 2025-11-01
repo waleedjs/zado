@@ -122,7 +122,7 @@ export default function PortfolioDetailsThreeArea() {
                 </div>
                 <div className="col-xl-9">
                   <div className="showcase-details-2-content-right tp_title_anim">
-                      <p className="pb-25">Liko website was using a generic template, felt quite outdated and not in-line with the quality of his work. The main goal was to translate his high-end photography into a digital experience that would honor and present his work in a memorable and contemporary way.</p>
+                      <p className="pb-25">zado website was using a generic template, felt quite outdated and not in-line with the quality of his work. The main goal was to translate his high-end photography into a digital experience that would honor and present his work in a memorable and contemporary way.</p>
                       <p>Each case study gets its own identity through the styling options in the custom content management system. The styling options are pre-defined</p>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export default function PortfolioDetailsThreeArea() {
               </div>
               <div className="col-xl-9">
                 <div className="showcase-details-2-content-right tp_title_anim">
-                    <p className="pb-25">Liko website was using a generic template, felt quite outdated and not in-line with the quality of his work. The main goal was to translate his high-end photography into a digital experience that would honor and present his work in a memorable and contemporary way.</p>
+                    <p className="pb-25">zado website was using a generic template, felt quite outdated and not in-line with the quality of his work. The main goal was to translate his high-end photography into a digital experience that would honor and present his work in a memorable and contemporary way.</p>
                     <p>Each case study gets its own identity through the styling options in the custom content management system. The styling options are pre-defined</p>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export default function PortfolioDetailsThreeArea() {
               </div>
               <div className="col-xl-9">
                 <div className="showcase-details-2-content-right tp_title_anim">
-                    <p className="pb-25">Liko website was using a generic template, felt quite outdated and not in-line with the quality of his work. The main goal was to translate his high-end photography into a digital experience that would honor and present his work in a memorable and contemporary way.</p>
+                    <p className="pb-25">zado website was using a generic template, felt quite outdated and not in-line with the quality of his work. The main goal was to translate his high-end photography into a digital experience that would honor and present his work in a memorable and contemporary way.</p>
                     <p>Each case study gets its own identity through the styling options in the custom content management system. The styling options are pre-defined</p>
                 </div>
               </div>

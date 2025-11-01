@@ -8,6 +8,19 @@
     &-slider-active{
         margin: 0px -15px;
     }
+    &-item{
+        width: 400px;
+        img{
+            height: 600px;
+            width: 400px;
+            object-fit: cover;
+        }
+        @media #{$xs}{
+            img{
+                height: 400px;
+            }
+        }
+    }
     &-shape{
         &-1{
             position: absolute;

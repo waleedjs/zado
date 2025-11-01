@@ -8,14 +8,14 @@ export default function LineText() {
           <div className="col-xl-12">
             <div className="tp-line-text-box">
               <h4 className="tp-line-text mb-15">
-                LinkedIn <span>- Facebook -</span> Twitter{" "}
-                <span>- Facebook -</span> Twitter <span>- Facebook -</span>{" "}
-                LinkedIn
+                SEO <span>- PPC -</span> Social Media{" "}
+                <span>- Content -</span> Analytics <span>- Email -</span>{" "}
+                SEO
               </h4>
               <h4 className="tp-line-text tp-line-text-2">
-                - Behance <span>- Youtube -</span> Dribble{" "}
-                <span>- Behance -</span> Youtube <span>- Dribble -</span>{" "}
-                LinkedIn
+                - Web Design <span>- Branding -</span> Marketing{" "}
+                <span>- Strategy -</span> Growth <span>- Digital -</span>{" "}
+                SEO
               </h4>
             </div>
           </div>

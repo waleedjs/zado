@@ -47,7 +47,7 @@ export default function ContactForm({btnCls=''}:IProps) {
         <ErrorMsg msg={errors.message?.message!} />
       </div>
       <div className="cn-contactform-btn">
-        <button className={`tp-btn-black-md ${btnCls} w-100`} type="submit">
+        <button className={`tp-btn-black-md rounded ${btnCls} w-100`} type="submit">
           Send Message
         </button>
       </div>

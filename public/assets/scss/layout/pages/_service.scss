@@ -75,6 +75,7 @@
 .tp-service-2{
     &-area{
         margin-top: 200px;
+        padding-bottom: 200px;
         @media #{$xl,$lg,$md,$xs}{
             margin-top: 0;
         }
@@ -112,9 +113,8 @@
     }
 
     &-accordion-box {
-        height: 400px;
-        overflow-y: auto;
-        scrollbar-width: none;
+        height: auto;
+        overflow-y: visible;
     }
 }
 .tp-service-3{

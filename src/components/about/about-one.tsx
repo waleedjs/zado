@@ -2,9 +2,9 @@
 import React, { CSSProperties } from 'react';
 import Image from 'next/image';
 // images
-import ab_1 from '@/assets/img/home-02/about/ab-1.jpg';
-import ab_2 from '@/assets/img/home-02/about/ab-2.jpg';
-import ab_3 from '@/assets/img/home-02/about/ab-s.jpg';
+import ab_1 from '@/assets/img/home-02/about/ab-1.webp';
+import ab_2 from '@/assets/img/home-02/about/ab-2.webp';
+import ab_3 from '@/assets/img/home-02/about/ab-s.webp';
 
 const AboutOne = () => {
 
@@ -15,8 +15,8 @@ const AboutOne = () => {
           <div className="col-xxl-8 col-xl-10">
             <div className="tp-about-2-title-box tp-btn-trigger tp-btn-bounce mb-70 text-start text-xl-center">
               <h2 className="tp-about-2-section-title">
-                Cooperation is possible within
-                various shapes and formats
+                Driving Digital Success Through
+                Innovative Marketing Strategies
               </h2>
             </div>
           </div>
@@ -29,19 +29,18 @@ const AboutOne = () => {
               </div>
               <div className="tp-about-2-thumb-inner">
                 <Image style={{width:"100%", height:"auto"}} width={221} height={278}  src={ab_2} alt="ab-img" />
-                <span className="tp-about-2-thumb-text">I’M A SUNGLASSES INFLUENCER</span>
+                <span className="tp-about-2-thumb-text">DIGITAL MARKETING EXPERTS</span>
               </div>
             </div>
           </div>
           <div className="col-xl-5 col-lg-12 order-0 order-xl-1">
             <div className="tp-about-2-content">
-              <span>FOLLOW FOR THE BEST EYEWEAR INSPIRATION</span>
+              <span>EXPERTISE IN DIGITAL MARKETING</span>
               <p className="mb-30">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                At Zado, we specialize in transforming businesses through innovative digital marketing solutions. Our team of experts leverages the latest strategies and technologies to help brands connect with their audience, drive traffic, and achieve measurable results.
               </p>
               <p className="mb-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt .!
+                From SEO and social media marketing to content creation and PPC campaigns, we provide comprehensive services tailored to your unique needs and goals.
               </p>
             </div>
           </div>

@@ -27,12 +27,12 @@ const VideoTwo = () => {
                   <span>
                     <Leaf />
                   </span>
-                  Work in motion
+                  Digital Campaigns in Action
                 </span>
-                <h2 className="tp-video-title">Play Reel</h2>
+                <h2 className="tp-video-title">Success Stories</h2>
                 <p>
-                  Our work is best experienced in motion. {"Don't"}
-                  forget to put on your headphones.
+                  Experience the power of effective digital marketing. {"Don't"}
+                  forget to put on your headphones for the full impact.
                 </p>
               </div>
             </div>

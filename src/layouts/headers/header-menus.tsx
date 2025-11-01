@@ -26,9 +26,9 @@ const HeaderMenus = () => {
     }
     // Jab page scroll na ho (Default state)
     if (isTitle) {
-      return theme === "dark" ? "text-white" : "text-black";
+      return "text-black";
     }
-    return theme === "dark" ? "text-white hover:text-indigo-400" : "text-black hover:text-indigo-600";
+    return "text-black hover:text-indigo-600";
   };
 
   // Background color ke liye helper function
@@ -36,13 +36,13 @@ const HeaderMenus = () => {
     if (isScrolled) {
       return "bg-black text-white border-gray-800";
     }
-    return theme === "dark" ? "bg-gray-900 text-white border-gray-700" : "bg-white text-black border-gray-200";
+    return "bg-white text-black border-gray-200";
   };
   
   // Link ke text color ke liye alag se function
   const getLinkTextColor = () => {
     if (isScrolled) {
-      return "text-white hover:text-indigo-400";
+      return theme === "dark" ? "text-white hover:text-gray-300" : "text-black hover:text-gray-700";
     }
     return theme === "dark" ? "text-white hover:text-indigo-400" : "text-black hover:text-indigo-600";
   }
@@ -184,23 +184,6 @@ const HeaderMenus = () => {
             </div>
           )}
           
-          {/* DROPDOWN MENUS */}
-          {menu.dropdown_menus && (
-            <ul
-              className={`tp-submenu submenu border shadow-md transition-opacity duration-300 ${getBgColor()} left-0`}
-            >
-              {menu.dropdown_menus.map((mm, i) => (
-                <li key={i}>
-                  <Link
-                    href={mm.link}
-                    className={`block px-3 py-1 transition-colors duration-200 ${getLinkTextColor()}`}
-                  >
-                    {mm.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
         </li>
       ))}
     </ul>

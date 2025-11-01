@@ -1,7 +1,7 @@
 @use '../../utils' as *;
 
 /*----------------------------------------*/
-/*  7.12 liko-dark css start
+/*  7.12 zado-dark css start
 /*----------------------------------------*/
 
 [data-theme='dark']{
@@ -1136,6 +1136,9 @@
         }
         & .breadcrumb__list span {
             color: var(--tp-common-white);
+        }
+        & .breadcrumb__list span::after {
+            background-color: var(--tp-common-white);
         }
         .tp-shop-widget-title {
             color: var(--tp-common-white);

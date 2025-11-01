@@ -15,8 +15,13 @@ import BigText from "@/components/big-text";
 import FooterThree from "@/layouts/footers/footer";
 // animation
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
+import { IServiceData } from "@/data/services-data";
 
-const ServiceDetailsMain = () => {
+interface Props {
+  service?: IServiceData;
+}
+
+const ServiceDetailsMain = ({ service }: Props) => {
   useScrollSmooth();
 
   useGSAP(() => {
@@ -37,7 +42,7 @@ const ServiceDetailsMain = () => {
         <div id="smooth-content">
           <main>
             {/* service details area */}
-            <ServiceDetailsArea />
+            <ServiceDetailsArea service={service} />
             {/* service details area */}
 
             {/* line image slider  */}
