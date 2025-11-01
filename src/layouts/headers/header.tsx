@@ -41,12 +41,10 @@ export default function HeaderThree() {
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-6 col-md-5 col-4">
                 <div className="tp-header-logo">
-                  <Link href="/" style={{
-                    color: isSticky ? (currentTheme === 'dark' ? 'white' : 'black') : (currentTheme === 'dark' ? 'white' : 'black'),
-                    fontSize: '24px',
-                    fontWeight: 'bold',
-                    transition: 'color 0.3s ease-in-out'
-                  }}>
+                  <Link href="/" style={{ color: isSticky ? 'white' : theme === "dark" ? 'white' : 'black', fontSize: '24px', fontWeight: 'bold' }}>
+=======
+                  <Link href="/" style={{ color: isSticky ? 'white' : theme === "dark" ? 'white' : 'black', fontSize: '24px', fontWeight: 'bold' }}>
+>>>>>>> 9662d95e512f6dae3ca41889f1eb07e291827806
                     ZADO
                   </Link>
                   {/* <Link href="/">
