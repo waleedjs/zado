@@ -10,8 +10,8 @@ import { useTheme } from "next-themes";
 
 export default function HeaderThree() {
    const {isSticky, headerFullWidth} = useStickyHeader(20);
-   const { theme } = useTheme();
-   const [openOffCanvas, setOpenOffCanvas] = React.useState(false);
+    const { theme } = useTheme();
+    const [openOffcanvas, setOpenOffcanvas] = React.useState(false);
    useEffect(() => {
      headerFullWidth();
    // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -42,9 +42,6 @@ export default function HeaderThree() {
               <div className="col-xl-2 col-lg-6 col-md-5 col-4">
                 <div className="tp-header-logo">
                   <Link href="/" style={{ color: isSticky ? 'white' : theme === "dark" ? 'white' : 'black', fontSize: '24px', fontWeight: 'bold' }}>
-=======
-                  <Link href="/" style={{ color: isSticky ? 'white' : theme === "dark" ? 'white' : 'black', fontSize: '24px', fontWeight: 'bold' }}>
->>>>>>> 9662d95e512f6dae3ca41889f1eb07e291827806
                     ZADO
                   </Link>
                   {/* <Link href="/">
@@ -86,7 +83,7 @@ export default function HeaderThree() {
                     >
                       Get in touch
                     </Link>
-                    <button onClick={() => setOpenOffCanvas(true)} className="ml-20 d-xl-none tp-header-4-bar tp-offcanvas-open-btn" style={{
+                    <button onClick={() => setOpenOffcanvas(true)} className="ml-20 d-xl-none tp-header-4-bar tp-offcanvas-open-btn" style={{
                       color: isSticky ? (currentTheme === "dark" ? 'white' : 'black') : (currentTheme === "dark" ? 'white' : 'black'),
                       transition: 'color 0.3s ease-in-out'
                     }}>
@@ -102,7 +99,7 @@ export default function HeaderThree() {
 
 
       {/* off canvas */}
-      <MobileOffcanvas openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} />
+      <MobileOffcanvas openOffcanvas={openOffcanvas} setOpenOffcanvas={setOpenOffcanvas} />
       {/* off canvas */}
     </>
   );
