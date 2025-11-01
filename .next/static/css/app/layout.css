@@ -51331,37 +51331,36 @@ body.tp-magic-cursor #magic-cursor {
 }
 
 .tp-hero-2-pt {
-  padding-top: 25px;
+  padding-top: 120px;
   padding-bottom: 75px;
 }
 .tp-hero-2-wrapper {
   padding-left: 120px;
-  height: 550px;
-  margin-top: 74px;
+  height: 600px;
   border-radius: 12px;
   padding-right: 30px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-hero-2-wrapper {
-    height: 500px;
+    height: 600px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-hero-2-wrapper {
-    height: 500px;
+    height: 600px;
     padding-left: 30px;
   }
 }
 @media (max-width: 767px) {
   .tp-hero-2-wrapper {
     padding-left: 20px;
-    height: 500px;
+    height: 600px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .tp-hero-2-wrapper {
     padding-left: 60px;
-    height: 500px;
+    height: 600px;
   }
 }
 .tp-hero-2-bg {
@@ -59810,26 +59809,26 @@ body.tp-magic-cursor #magic-cursor {
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  height: 500px;
+  height: 570px;
   width: calc(100% - 30px);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-video-wrap {
-    height: 450px;
+    height: 520px;
     margin-bottom: 100px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-video-wrap {
     margin-bottom: 100px;
-    height: 400px;
+    height: 470px;
   }
 }
 @media (max-width: 767px) {
   .tp-video-wrap {
     margin: 0;
     margin-bottom: 40px;
-    height: 350px;
+    height: 420px;
     width: 100%;
   }
 }
