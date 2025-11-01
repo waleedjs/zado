@@ -26,17 +26,17 @@ const HeaderMenus = () => {
     }
     // Jab page scroll na ho (Default state)
     if (isTitle) {
-      return "text-black";
+      return theme === "dark" ? "text-white" : "text-black";
     }
-    return "text-black hover:text-indigo-600";
+    return theme === "dark" ? "text-white hover:text-indigo-400" : "text-black hover:text-indigo-600";
   };
 
   // Background color ke liye helper function
   const getBgColor = () => {
     if (isScrolled) {
-      return "bg-black text-white border-gray-800";
+      return theme === "dark" ? "bg-black text-white border-gray-800" : "bg-white text-black border-gray-200";
     }
-    return "bg-white text-black border-gray-200";
+    return theme === "dark" ? "bg-black text-white border-gray-800" : "bg-white text-black border-gray-200";
   };
   
   // Link ke text color ke liye alag se function

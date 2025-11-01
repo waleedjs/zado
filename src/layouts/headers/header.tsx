@@ -19,6 +19,14 @@ export default function HeaderThree() {
 
    // Force theme detection for fast switching
    const currentTheme = theme || (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+   const [isScrolled, setIsScrolled] = React.useState(false);
+   React.useEffect(() => {
+     const handleScroll = () => {
+       setIsScrolled(window.scrollY > 20);
+     };
+     window.addEventListener("scroll", handleScroll);
+     return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
   return (
     <>
       <header className="tp-header-height">
@@ -41,7 +49,12 @@ export default function HeaderThree() {
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-6 col-md-5 col-4">
                 <div className="tp-header-logo">
-                  <Link href="/" style={{ color: isSticky ? 'white' : theme === "dark" ? 'white' : 'black', fontSize: '24px', fontWeight: 'bold' }}>
+                  <Link href="/" style={{
+                    color: isSticky || isScrolled ? (currentTheme === 'dark' ? 'white' : 'black') : (currentTheme === 'dark' ? 'white' : 'black'),
+                    fontSize: '24px',
+                    fontWeight: 'bold',
+                    transition: 'color 0.3s ease-in-out'
+                  }}>
                     ZADO
                   </Link>
                   {/* <Link href="/">
@@ -84,7 +97,7 @@ export default function HeaderThree() {
                       Get in touch
                     </Link>
                     <button onClick={() => setOpenOffcanvas(true)} className="ml-20 d-xl-none tp-header-4-bar tp-offcanvas-open-btn" style={{
-                      color: isSticky ? (currentTheme === "dark" ? 'white' : 'black') : (currentTheme === "dark" ? 'white' : 'black'),
+                      color: isSticky || isScrolled ? (currentTheme === "dark" ? 'white' : 'black') : (currentTheme === "dark" ? 'white' : 'black'),
                       transition: 'color 0.3s ease-in-out'
                     }}>
                       <i className="fa-solid fa-bars"></i>

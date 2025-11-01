@@ -189,28 +189,28 @@
 }
 .tp-hero-2{
     &-pt{
-        padding-top: 75px;
+        padding-top: 25px;
         padding-bottom: 75px;
     }
     &-wrapper{
         padding-left: 120px;
-        height: 820px;
+        height: 600px;
         border-radius: 12px;
         padding-right: 30px;
         @media #{$xl,$lg}{
-            height: 660px;
+            height: 600px;
         }
         @media #{$md}{
-            height: 660px;
+            height: 600px;
             padding-left: 30px;
         }
         @media #{$xs}{
             padding-left: 20px;
-            height: 570px;
+            height: 600px;
         }
         @media #{$sm}{
             padding-left: 60px;
-            height: 560px;
+            height: 600px;
         }
     }
     &-bg{
