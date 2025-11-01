@@ -4,9 +4,9 @@ import services_data from "@/data/services-data";
 import ServiceDetailsMain from "@/pages/service/service-details";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -16,7 +16,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = services_data.find((s) => s.slug === params.slug);
+  const { slug } = await params;
+  const service = services_data.find((s) => s.slug === slug);
 
   if (!service) {
     return {
@@ -30,8 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ServicePage({ params }: Props) {
-  const service = services_data.find((s) => s.slug === params.slug);
+export default async function ServicePage({ params }: Props) {
+  const { slug } = await params;
+  const service = services_data.find((s) => s.slug === slug);
 
   if (!service) {
     notFound();
