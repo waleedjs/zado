@@ -51,7 +51,7 @@ export default function HeaderThree() {
               <div className="col-xl-2 col-lg-6 col-md-5 col-4">
                 <div className="tp-header-logo">
                   <Link href="/">
-                    <Image src={currentTheme === 'dark' ? whiteLogo : blackLogo} alt="logo" width={200} height={100} />
+                    <Image src={currentTheme === 'dark' ? whiteLogo : blackLogo} alt="logo" width={120} height={100} />
                   </Link>
                 </div>
               </div>
