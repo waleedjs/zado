@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperOptions } from "swiper/types";
 import { Navigation, Pagination } from "swiper/modules";
 import { ScrollDown } from "@/components/svg";
-import { blog_classic } from "@/data/blog-data";
+import { blog_data } from "@/data/blog-data";
 import { scroller } from "react-scroll";
 
 // slider setting
@@ -27,7 +27,7 @@ const slider_setting: SwiperOptions = {
 };
 
 export default function BlogClassicSlider() {
-  const slider_blog_data = [...blog_classic.filter((b) => b.blogHeroSlider)];
+  const slider_blog_data = [...blog_data.filter((b) => b.blogHeroSlider)];
 
   const scrollTo = () => {
     scroller.scrollTo('postbox', {

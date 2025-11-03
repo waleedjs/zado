@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperOptions } from "swiper/types";
 
 import BlogSidebar from "./blog-sidebar";
-import { blog_classic } from "@/data/blog-data";
+import { blog_data } from "@/data/blog-data";
 import { Quote, QuoteTwo } from "../svg";
 import usePagination from "@/hooks/use-pagination";
 import { IBlogDT } from "@/types/blog-d-t";
@@ -32,7 +32,7 @@ const slider_setting: SwiperOptions = {
 };
 
 export default function BlogClassicArea() {
-  const blog_items = [...blog_classic.filter((b) => !b.blogHeroSlider)];
+  const blog_items = [...blog_data.filter((b) => !b.blogHeroSlider)];
   const { currentItems, handlePageClick, pageCount } = usePagination<IBlogDT>(blog_items, 4);
   const { playVideo } = useVideoModal();
 
