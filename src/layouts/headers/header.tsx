@@ -3,7 +3,8 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HeaderMenus from "./header-menus";
-import logo from '@/assets/img/logo/logo-white.png';
+import whiteLogo from '@/assets/img/logo/Zado Final Logo Design White.png';
+import blackLogo from '@/assets/img/logo/Zado Final Logo Design Black.png';
 import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
 import useStickyHeader from "@/hooks/use-sticky-header";
 import { useTheme } from "next-themes";
@@ -49,17 +50,9 @@ export default function HeaderThree() {
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-6 col-md-5 col-4">
                 <div className="tp-header-logo">
-                  <Link href="/" style={{
-                    color: isSticky || isScrolled ? (currentTheme === 'dark' ? 'white' : 'black') : (currentTheme === 'dark' ? 'white' : 'black'),
-                    fontSize: '24px',
-                    fontWeight: 'bold',
-                    transition: 'color 0.3s ease-in-out'
-                  }}>
-                    ZADO
+                  <Link href="/">
+                    <Image src={currentTheme === 'dark' ? whiteLogo : blackLogo} alt="logo" width={200} height={100} />
                   </Link>
-                  {/* <Link href="/">
-                    <Image src={logo} alt="logo" />
-                  </Link> */}
                 </div>
               </div>
               <div className="col-xl-6 d-none d-xl-block">
