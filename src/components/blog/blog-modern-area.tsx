@@ -5,6 +5,7 @@ import usePagination from "@/hooks/use-pagination";
 import Pagination from "../ui/pagination";
 import { IBlogDT } from "@/types/blog-d-t";
 import BlogItem from "./blog-item/blog-item";
+import Link from "next/link";
 
 export default function BlogModern() {
   const blog_items = [...blog_modern];
@@ -18,21 +19,23 @@ export default function BlogModern() {
         <div className="container container-1500">
           <div className="row">
             <div className="col-xl-12">
-              <div className="tp-blog-standard-thumb-box p-relative">
-                <Image data-speed=".8" src={first_blog.img!} alt="blog-img" />
-                <div className="tp-blog-standard-title-box d-none d-sm-block">
-                  <h4
-                    className="tp-blog-standard-title tp-char-animation"
-                    dangerouslySetInnerHTML={{ __html: first_blog.title }}
-                  ></h4>
+              <Link href={`/blog/${first_blog.slug}`}>
+                <div className="tp-blog-standard-thumb-box p-relative" style={{ cursor: 'pointer' }}>
+                  <Image data-speed=".8" src={first_blog.img!} alt="blog-img" />
+                  <div className="tp-blog-standard-title-box d-none d-sm-block">
+                    <h4
+                      className="tp-blog-standard-title tp-char-animation"
+                      dangerouslySetInnerHTML={{ __html: first_blog.title }}
+                    ></h4>
+                  </div>
+                  <div className="tp-blog-standard-meta d-none d-sm-block">
+                    <span>
+                      {first_blog.date.split(".")[1]} <br />{" "}
+                      {first_blog.date.split(".")[0]}
+                    </span>
+                  </div>
                 </div>
-                <div className="tp-blog-standard-meta d-none d-sm-block">
-                  <span>
-                    {first_blog.date.split(".")[1]} <br />{" "}
-                    {first_blog.date.split(".")[0]}
-                  </span>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

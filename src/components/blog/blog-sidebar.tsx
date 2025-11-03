@@ -1,59 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import avatar from "@/assets/img/inner-blog/blog-sidebar/avatar/avata-2.jpg";
-import banner from "@/assets/img/inner-blog/blog-sidebar/banner/banner.jpg";
-import { Search } from "../svg";
-import { blog_classic } from "@/data/blog-data";
+import { blog_data } from "@/data/blog-data";
 import Link from "next/link";
 
 export default function BlogSidebar() {
-  const rc_posts = [...blog_classic.filter((b) => b.img)].slice(0, 3);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const rc_posts = [...blog_data.filter((b) => b.img && b.slug)].slice(0, 3);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      const searchWords = searchTerm.toLowerCase().split(' ').filter(word => word.length > 0);
+      const results = blog_data.filter(blog => {
+        const title = blog.title.toLowerCase();
+        const desc = blog.desc?.toLowerCase() || '';
+        const category = blog.category.toLowerCase();
+
+        // Check if all search words are present in title, desc, or category
+        return searchWords.every(word =>
+          title.includes(word) ||
+          desc.includes(word) ||
+          category.includes(word)
+        );
+      });
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
+    }
+  };
+
+  const clearSearch = () => {
+    setSearchTerm("");
+    setSearchResults([]);
+  };
   return (
     <div className="sidebar__wrapper">
-      <div className="sidebar__widget mb-45">
-        <div className="sidebar__author text-center">
-          <div className="sidebar__author-thumb">
-            <Image src={avatar} alt="avatar" style={{ height: "auto" }} />
-          </div>
-          <div className="sidebar__author-content">
-            <h4 className="sidebar__author-title">Mark Hopkins</h4>
-            <p>Lorem ipsum dolor consectetur adipiscing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div className="sidebar__widget mb-65">
-        <div className="sidebar__widget-content">
-          <div className="sidebar__search">
-            <form action="#">
-              <div className="sidebar__search-input-2">
-                <input type="text" placeholder="Search product" />
-                <button type="submit">
-                  <Search />
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div className="sidebar__widget mb-65">
-        <h3 className="sidebar__widget-title">Category</h3>
-        <div className="sidebar__widget-content">
-          <ul>
-            <li>
-              <Link href="/blog-modern">Branding</Link>
-            </li>
-            <li>
-              <Link href="/blog-modern">Lifestyle</Link>
-            </li>
-            <li>
-              <Link href="/blog-modern">UI/UX Design</Link>
-            </li>
-            <li>
-              <Link href="/blog-modern">Production</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
       <div className="sidebar__widget mb-65">
         <h3 className="sidebar__widget-title">Recent Post</h3>
         <div className="sidebar__widget-content">
@@ -64,7 +46,7 @@ export default function BlogSidebar() {
                 className="rc__post mb-30 d-flex align-items-center"
               >
                 <div className="rc__post-thumb mr-20">
-                  <Link href={`/blog-details/${item.id}`}>
+                  <Link href={`/blog/${item.slug}`}>
                     <Image
                       style={{ width: "auto", height: "auto" }}
                       src={item.img!}
@@ -79,7 +61,7 @@ export default function BlogSidebar() {
                     <span>{item.date}</span>
                   </div>
                   <h3 className="rc__post-title">
-                    <Link href={`/blog-details/${item.id}`}>{item.title}</Link>
+                    <Link href={`/blog/${item.slug}`}>{item.title}</Link>
                   </h3>
                 </div>
               </div>
@@ -87,36 +69,74 @@ export default function BlogSidebar() {
           </div>
         </div>
       </div>
+
+      {searchResults.length > 0 && (
+        <div className="sidebar__widget mb-65">
+          <h3 className="sidebar__widget-title">
+            Search Results
+            <button onClick={clearSearch} className="clear-search-btn" style={{ float: 'right', background: 'none', border: 'none', color: '#999', cursor: 'pointer' }}>
+              ✕
+            </button>
+          </h3>
+          <div className="sidebar__widget-content">
+            <div className="sidebar__post rc__post">
+              {searchResults.slice(0, 5).map((item) => (
+                <div
+                  key={item.id}
+                  className="rc__post mb-20 d-flex align-items-center"
+                >
+                  <div className="rc__post-thumb mr-20">
+                    <Link href={`/blog/${item.slug}`}>
+                      <Image
+                        style={{ width: "auto", height: "auto" }}
+                        src={item.img!}
+                        alt="blog-img"
+                        width={80}
+                        height={80}
+                      />
+                    </Link>
+                  </div>
+                  <div className="rc__post-content">
+                    <div className="rc__meta d-flex align-items-center">
+                      <span>{item.date}</span>
+                    </div>
+                    <h3 className="rc__post-title">
+                      <Link href={`/blog/${item.slug}`}>{item.title}</Link>
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
       <div className="sidebar__widget mb-65">
         <h3 className="sidebar__widget-title">Tags</h3>
         <div className="sidebar__widget-content">
           <div className="tagcloud">
-            <Link href="#">Creative</Link>
-            <Link href="#">Vision</Link>
-            <Link href="#">Popular</Link>
-            <Link href="#">Photography</Link>
-            <Link href="#">Lifestyle</Link>
+            <Link href="/blog?tag=creative">Creative</Link>
+            <Link href="/blog?tag=vision">Vision</Link>
+            <Link href="/blog?tag=popular">Popular</Link>
+            <Link href="/blog?tag=photography">Photography</Link>
+            <Link href="/blog?tag=lifestyle">Lifestyle</Link>
+            <Link href="/blog?tag=digital-marketing">Digital Marketing</Link>
+            <Link href="/blog?tag=branding">Branding</Link>
+            <Link href="/blog?tag=zado">ZADO</Link>
           </div>
         </div>
       </div>
+      
       <div className="sidebar__widget mb-65">
-        <div className="sidebar__widget-content">
-          <div className="sidebar__banner-img">
-            <Image src={banner} alt="banner" style={{ height: "auto" }} />
-          </div>
-        </div>
-      </div>
-      <div className="sidebar__widget mb-65">
-        <h3 className="sidebar__widget-title">Follow Us</h3>
+        <h3 className="sidebar__widget-title">Share Post</h3>
         <div className="sidebar__widget-content">
           <div className="sidebar__social">
-            <Link href="#">
+            <Link href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank">
               <i className="fa-brands fa-facebook"></i>
             </Link>
-            <Link href="#">
+            <Link href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`} target="_blank">
               <i className="fa-brands fa-twitter"></i>
             </Link>
-            <Link href="#">
+            <Link href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`} target="_blank">
               <i className="fa-brands fa-linkedin-in"></i>
             </Link>
           </div>

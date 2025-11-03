@@ -14,8 +14,8 @@ export default function BlogItem({ item }: { item: IBlogDT }) {
       </div>
       <div className="tp-blog-content">
         <span>{item.category}</span>
-        <h4 className="tp-blog-title-sm">
-          <Link href={`/blog-details/${item.id}`}>{item.title}</Link>
+        <h4 className="tp-blog-title-sm" style={{ lineHeight: '1.4' }}>
+          <Link href={`/blog/${item.slug}`}>{item.title}</Link>
         </h4>
       </div>
     </div>

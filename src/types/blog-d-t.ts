@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 
 export interface IBlogDT {
   id: number;
+  slug?: string;
   img?: StaticImageData;
   images?: StaticImageData[];
   title: string;
