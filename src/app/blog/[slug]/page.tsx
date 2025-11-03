@@ -5,6 +5,7 @@ import BlogDetailsArea from "@/components/blog/details/blog-details-area";
 import Wrapper from "@/layouts/wrapper";
 import HeaderThree from "@/layouts/headers/header";
 import FooterThree from "@/layouts/footers/footer";
+// Import client component without .tsx extension to avoid TypeScript error
 import BlogDetailsClient from "./client";
 
 interface Props {
