@@ -184,7 +184,7 @@ export default function BlogDetailsAreaTwo() {
                   {/* blog details author */}
 
                   {/* blog details navigation */}
-                  <BlogDetailsNavigation />
+                  <BlogDetailsNavigation blog={{} as any} allBlogs={[]} />
                   {/* blog details navigation */}
                   <div className="postbox__comment mb-100">
                     <h3 className="postbox__comment-title">3 Comments</h3>

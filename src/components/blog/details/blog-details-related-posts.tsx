@@ -1,9 +1,9 @@
 import React from "react";
-import { blog_home_five } from "@/data/blog-data";
+import { blog_data } from "@/data/blog-data";
 import BlogItemTwo from "../blog-item/blog-item-2";
 
 export default function BlogDetailsRelatedPosts() {
-  const blog_items = [...blog_home_five].slice(0, 3);
+  const blog_items = [...blog_data].slice(0, 3);
   return (
     <div className="blog-details-realated-area grey-bg-2 pt-90 pb-40">
       <div className="container">

@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { blog_lists } from "@/data/blog-data";
+import { blog_data } from "@/data/blog-data";
 import usePagination from "@/hooks/use-pagination";
 import Pagination from "../ui/pagination";
 
 export default function BlogListArea() {
-  const blog_items = [...blog_lists];
+  const blog_items = [...blog_data];
   const { currentItems, handlePageClick, pageCount } = usePagination(blog_items,4);
   return (
     <div className="tp-blog-list-area mb-30">
