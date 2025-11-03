@@ -1,7 +1,12 @@
+"use client";
+
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blog_data } from "@/data/blog-data";
-import BlogDetailsMain from "@/pages/blog/blog-details";
+import BlogDetailsArea from "@/components/blog/details/blog-details-area";
+import Wrapper from "@/layouts/wrapper";
+import HeaderThree from "@/layouts/headers/header";
+import FooterThree from "@/layouts/footers/footer";
 
 interface Props {
   params: Promise<{
@@ -55,7 +60,19 @@ const BlogDetailsPage = async ({ params }: Props) => {
     notFound();
   }
 
-  return <BlogDetailsMain blog={blog} />;
+  return (
+    <Wrapper>
+      <HeaderThree />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <main>
+            <BlogDetailsArea blog={blog} />
+          </main>
+          <FooterThree />
+        </div>
+      </div>
+    </Wrapper>
+  );
 };
 
 export default BlogDetailsPage;
