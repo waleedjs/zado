@@ -1,5 +1,3 @@
-"use client";
-
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blog_data } from "@/data/blog-data";
@@ -7,6 +5,7 @@ import BlogDetailsArea from "@/components/blog/details/blog-details-area";
 import Wrapper from "@/layouts/wrapper";
 import HeaderThree from "@/layouts/headers/header";
 import FooterThree from "@/layouts/footers/footer";
+import BlogDetailsClient from "./client";
 
 interface Props {
   params: Promise<{
@@ -52,21 +51,14 @@ export async function generateStaticParams() {
     }));
 }
 
-const BlogDetailsPage = async ({ params }: Props) => {
-  const { slug } = await params;
-  const blog = blog_data.find((b) => b.slug === slug);
-
-  if (!blog) {
-    notFound();
-  }
-
+const BlogDetailsPage = ({ params }: Props) => {
   return (
     <Wrapper>
       <HeaderThree />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <BlogDetailsArea blog={blog} />
+            <BlogDetailsClient params={params} />
           </main>
           <FooterThree />
         </div>
