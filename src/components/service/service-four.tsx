@@ -7,20 +7,20 @@ import icon from '@/assets/img/home-03/service/sv-icon-1.png';
 const service_data = [
   {
     id: 1,
-    title: "Product design",
-    desc: "Once we have an idea of your needs, a research and design process begins to gain deep knowledge about the business, users <br> and world context.",
+    title: "Graphic & UI/UX design",
+    desc: "Every project starts with understanding your goals.We explore your brand, your audience, and the world you operate in — shaping a design strategy built on insight and intention.Research / UI-UX / Prototyping",
     category: ["Research", "Ui/ UX", "Prototyping"],
   },
   {
     id: 2,
-    title: "Web/Mobile",
-    desc: "Once we have an idea of your needs, a research and design process begins to gain deep knowledge about the business, users <br> and world context.",
-    category: ["SEO", "Creative Development", "Varcel"],
+    title: "Web & Mobile Development",
+    desc: "We design and build responsive, high-performance platforms that look beautiful and work flawlessly.",
+    category: ["SEO", "Creative Development", "Vercel"],
   },
   {
     id: 3,
     title: "Consulting",
-    desc: "Once we have an idea of your needs, a research and design process begins to gain deep knowledge about the business, users <br> and world context.",
+    desc: "We collaborate closely with brands to create digital strategies that guide vision, growth, and innovation.",
     category: ["Creative", "Digital strategy", "MVP"],
   },
 ];
@@ -33,7 +33,7 @@ export default function ServiceFour() {
           <div className="col-xl-9">
             <div className="tp-service-3-title-box mb-60 p-relative">
               <div className="tp-service-3-icon">
-                <Image src={icon} alt="icon" />
+                <Image src={icon} alt="Service icon" title="Service icon" />
               </div>
               <span className="tp-section-subtitle-2 tp_fade_bottom">
                 <span>
@@ -47,7 +47,7 @@ export default function ServiceFour() {
                 </span>
               </span>
               <h4 className="tp-section-title-90 tp_text_invert tp_fade_bottom">
-                Creative <br /> development studio
+                Digital Marketing <br /> Software Agency
               </h4>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function ServiceFour() {
               <div className="col-xl-3 col-lg-3">
                 <div className="tp-service-3-title-box">
                   <h4 className="tp-service-3-title">
-                    <Link href="/service">{item.title}</Link>
+                    <Link href="/contact">{item.title}</Link>
                   </h4>
                 </div>
               </div>
@@ -77,10 +77,10 @@ export default function ServiceFour() {
                 <div className="tp-service-3-btn-box text-start text-md-end">
                   <Link
                     className="tp-btn-zikzak-sm p-relative"
-                    href="/service"
+                    href="/contact"
                   >
                     <span className="zikzak-content">
-                      See <br /> Details
+                      Get In <br></br> Touch
                       <RightArrow clr="currentColor" />
                     </span>
                     <span>
