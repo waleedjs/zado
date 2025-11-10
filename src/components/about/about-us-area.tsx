@@ -19,7 +19,8 @@ export default function AboutUsArea() {
                 <Image
                   data-speed=".7"
                   src={ab_1}
-                  alt="about-img"
+                  alt="About us team collaboration"
+                  title="About us team collaboration"
                   style={{ height: "auto" }}
                 />
               </div>
@@ -30,13 +31,15 @@ export default function AboutUsArea() {
                   data-speed="1.1"
                   className="inner-img z-index-5"
                   src={ab_2}
-                  alt="about-img"
+                  alt="About us creative workspace"
+                  title="About us creative workspace"
                   style={{ height: "auto" }}
                 />
                 <Image
                   data-speed="0.9"
                   src={ab_3}
-                  alt="about-img"
+                  alt="About us design process"
+                  title="About us design process"
                   style={{ height: "auto" }}
                 />
               </div>
@@ -71,7 +74,8 @@ export default function AboutUsArea() {
                   <Image
                     className="ab-about-shape-1 d-none d-md-block"
                     src={shape}
-                    alt="shape"
+                    alt="About section decorative shape"
+                    title="About section decorative shape"
                   />
                 </div>
               </div>

@@ -51,7 +51,7 @@ export default function HeaderThree() {
               <div className="col-xl-2 col-lg-6 col-md-5 col-4">
                 <div className="tp-header-logo">
                   <Link href="/">
-                    <Image src={currentTheme === 'dark' ? whiteLogo : blackLogo} alt="logo" />
+                    <Image src={currentTheme === 'dark' ? whiteLogo : blackLogo} alt="ZADO Logo" title="ZADO Digital Marketing Agency Logo" />
                   </Link>
                 </div>
               </div>

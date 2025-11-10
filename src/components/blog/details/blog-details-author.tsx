@@ -10,7 +10,8 @@ export default function BlogDetailsAuthor() {
         <Image
           style={{ width: "100%", height: "auto" }}
           src={avatar}
-          alt=""
+          alt="Blog author avatar"
+          title="Blog author avatar"
         />
       </div>
       <div className="blog-details-author-content-wrap">

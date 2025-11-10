@@ -16,7 +16,7 @@ export default function ServiceHero() {
                 Experience <br /> the best services.
               </h4>
               <p className="tp_fade_bottom">
-                Fulfilled direction use continual set him propriety continued.
+                Every project we take on combines creativity, strategy, and execution to deliver results that matter.
               </p>
             </div>
           </div>
@@ -30,6 +30,7 @@ export default function ServiceHero() {
                   src={ser_hero}
                   alt="ser_hero-img"
                   style={{height:"auto"}}
+                  title="services hero"
                 />
               </div>
             </div>

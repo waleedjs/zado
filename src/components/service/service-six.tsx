@@ -17,7 +17,8 @@ export default function ServiceSix() {
                 <div className="sv-service-thumb">
                   <Image
                     src={item.img}
-                    alt="service-img"
+                    alt={`${item.title} service illustration`}
+                    title={`${item.title} service illustration`}
                     style={{ height: "auto" }}
                   />
                 </div>
@@ -46,10 +47,11 @@ export default function ServiceSix() {
                       <div className="sv-service-btn">
                         <Link
                           className="tp-btn-zikzak zikzak-inner p-relative"
-                          href={`/services/${item.slug}`}
+                          href= "/contact"
+                          
                         >
                           <span className="zikzak-content">
-                            See <br /> Details
+                            Get In <br /> Touch
                             <RightArrow clr="currentColor" />
                           </span>
                           <ShapeTwo />

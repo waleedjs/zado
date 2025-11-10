@@ -13,6 +13,12 @@ const service_accordion = [
   {
     id: 1,
     icon: ser_1,
+    title: "Web Design & Development",
+    desc: " Build intuitive, user-friendly digital experiences. Our team crafts responsive websites and applications that not only look great but also deliver seamless functionality across all devices.",
+  },
+  {
+    id: 1,
+    icon: ser_1,
     title: "SEO Optimization",
     desc: "Boost your online visibility and drive organic traffic with our expert SEO services. We implement proven strategies to improve your search engine rankings and attract qualified leads to your website.",
   },
@@ -49,8 +55,7 @@ export default function ServiceTwo() {
                 OUR SERVICES
               </span>
               <h4 className="tp-section-title-40">
-                Comprehensive Digital Marketing Solutions to Boost Your Online Presence
-                and Drive Measurable Business Growth.
+                We provide comprehensive digital solutions to boost your online presence and drive business growth.
               </h4>
             </div>
           </div>
@@ -58,7 +63,7 @@ export default function ServiceTwo() {
         <div className="row align-items-center">
           <div className="col-xxl-6 col-xl-4 col-lg-4">
             <div className="tp-service-2-shape-img text-center text-lg-start">
-              <Image src={shape} alt="" />
+              <Image src={shape} alt="Service section decorative shape" title="Service section decorative shape" />
             </div>
           </div>
           <div className="col-xxl-6 col-xl-8 col-lg-8">
@@ -76,7 +81,7 @@ export default function ServiceTwo() {
                         aria-controls={`collapse-${s.id}`}
                       >
                         <span>
-                          <Image src={s.icon} alt="icon" />
+                          <Image src={s.icon} alt={`${s.title} service icon`} title={`${s.title} service icon`} />
                         </span>
                         {s.title}
                         <span className="accordion-icon"></span>

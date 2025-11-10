@@ -19,9 +19,13 @@ export default function BlogModern() {
         <div className="container container-1500">
           <div className="row">
             <div className="col-xl-12">
+              <div className="blog-page-title mb-50">
+                <h1 className="tp-section-title text-center">ZADO Blog</h1>
+                <p className="text-center">Digital Marketing Insights, Tips & Industry News</p>
+              </div>
               <Link href={`/blog/${first_blog.slug}`}>
                 <div className="tp-blog-standard-thumb-box p-relative" style={{ cursor: 'pointer' }}>
-                  <Image data-speed=".8" src={first_blog.img!} alt="blog-img" />
+                  <Image data-speed=".8" src={first_blog.img!} alt={`Blog post: ${first_blog.title}`} title={`Blog post: ${first_blog.title}`} />
                   <div className="tp-blog-standard-title-box d-none d-sm-block">
                     <h4
                       className="tp-blog-standard-title tp-char-animation"

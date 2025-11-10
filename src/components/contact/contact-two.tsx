@@ -21,12 +21,13 @@ export default function ContactTwo() {
             <div className="ab-about-category-title-box mb-40 p-relative">
               <h4 className="ab-about-category-title">
                 Send a Message <br />
-                <span>Contact Us</span>
+                <span>We’d love to hear from you. Have a concept, a challenge, or just want to explore possibilities? We’re ready to collaborate.</span>
               </h4>
               <Image
                 className="ab-about-shape-1 d-none d-xl-block"
                 src={shape}
-                alt="shape"
+                alt="Contact form decorative shape"
+                title="Contact form decorative shape"
               />
             </div>
           </div>

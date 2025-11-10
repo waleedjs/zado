@@ -34,7 +34,8 @@ export default function AboutMeArea() {
                   <Image
                     className="ab-about-shape-1 d-none d-md-block"
                     src={shape}
-                    alt="shape"
+                    alt="About me section decorative shape"
+                    title="About me section decorative shape"
                   />
                 </div>
               </div>

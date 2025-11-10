@@ -28,7 +28,7 @@ const AboutOne = () => {
                 <Image width={301} height={376} src={ab_1} alt="ab-img"/>
               </div>
               <div className="tp-about-2-thumb-inner">
-                <Image style={{width:"100%", height:"auto"}} width={221} height={278}  src={ab_2} alt="ab-img" />
+                <Image style={{width:"100%", height:"auto"}} width={221} height={278}  src={ab_2} alt="ab-img" title='ab-img' />
                 <span className="tp-about-2-thumb-text">DIGITAL MARKETING EXPERTS</span>
               </div>
             </div>
@@ -46,7 +46,7 @@ const AboutOne = () => {
           </div>
           <div className="col-xl-2 col-lg-6 col-md-6 order-1">
             <div className="tp-about-2-right-thumb text-end">
-              <Image style={{ width: "100%", height: "auto" }} data-speed="auto" src={ab_3} alt="ab-img" data-lag="0" />
+              <Image style={{ width: "100%", height: "auto" }} data-speed="auto" src={ab_3} alt="ab-img" title='ab-2-img' data-lag="0" />
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ProjectShape, RightArrow } from "../svg";
-import cta from '@/assets/img/home-03/cta/cta-1.png';
+import cta from "@/assets/img/home-03/cta/cta-1.png";
 import Link from "next/link";
 
 export default function ContactOne() {
@@ -15,11 +15,11 @@ export default function ContactOne() {
               <span>about it</span>
             </h4>
             <p className="tp_fade_bottom">
-              We will collaborate to find the right answer and bring progress to
-              your business and to the world.
+              Let’s work together to find the right solution — one that pushes your brand forward through clarity,
+              creativity, and design thinking.
             </p>
             <div className="tp-cta-icon">
-              <Image src={cta} alt="cta-img" />
+              <Image src={cta} alt="Contact call-to-action illustration" title="Contact call-to-action illustration" />
             </div>
             <div className="tp-cta-btn-box">
               <Link className="tp-btn-zikzak p-relative" href="/contact">

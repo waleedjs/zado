@@ -31,15 +31,47 @@ export default function BlogDetailsArea({ blog }: Props) {
          <div className="row">
            <div className="col-xxl-8 col-xl-8 col-lg-8">
              <div className="postbox__wrapper">
+               {/* Blog Featured Image */}
+               <div className="blog-details-featured-image mb-40">
+                 <Image
+                   src={blog.img!}
+                   alt={`Featured image for blog post: ${blog.title}`}
+                   title={blog.title}
+                   width={800}
+                   height={400}
+                   style={{
+                     width: "100%",
+                     height: "400px",
+                     objectFit: "cover",
+                     borderRadius: "8px"
+                   }}
+                   className="blog-featured-img d-none d-md-block"
+                 />
+                 <Image
+                   src={blog.img!}
+                   alt={`Featured image for blog post: ${blog.title}`}
+                   title={blog.title}
+                   width={600}
+                   height={300}
+                   style={{
+                     width: "100%",
+                     height: "300px",
+                     objectFit: "cover",
+                     borderRadius: "8px"
+                   }}
+                   className="blog-featured-img d-md-none"
+                 />
+               </div>
+
                <div className="blog-details-top-text">
                  <p>
                    {blog.desc}
                  </p>
                </div>
                <div className="blog-details-left-content">
-                 <h4 className="blog-details-left-title">
+                 <h1 className="blog-details-left-title">
                    {blog.title}
-                 </h4>
+                 </h1>
                  <p className="mb-20">
                    {blog.desc}
                  </p>
@@ -54,7 +86,8 @@ export default function BlogDetailsArea({ blog }: Props) {
                       <Image
                         className="w-100 mb-20"
                         src={details_thumb_1}
-                        alt="details-thumb"
+                        alt="Blog content illustration 1"
+                        title="Blog content illustration 1"
                       />
                     </div>
                   </div>
@@ -63,7 +96,8 @@ export default function BlogDetailsArea({ blog }: Props) {
                       <Image
                         className="w-100 mb-20"
                         src={details_thumb_2}
-                        alt="details-thumb"
+                        alt="Blog content illustration 2"
+                        title="Blog content illustration 2"
                       />
                     </div>
                   </div>
@@ -108,7 +142,8 @@ export default function BlogDetailsArea({ blog }: Props) {
                     <div className="blog-details-thumb">
                       <Image
                         src={details_thumb_3}
-                        alt="details-thumb"
+                        alt="Blog content illustration 3"
+                        title="Blog content illustration 3"
                         style={{ height: "auto" }}
                       />
                     </div>
@@ -151,9 +186,7 @@ export default function BlogDetailsArea({ blog }: Props) {
             </div>
           </div>
           <div className="col-xxl-4 col-xl-4 col-lg-4">
-            <div style={{ position: 'sticky', top: '100px' }}>
-              <BlogSidebar />
-            </div>
+            <BlogSidebar />
           </div>
         </div>
       </div>

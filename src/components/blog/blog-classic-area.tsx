@@ -72,7 +72,7 @@ export default function BlogClassicArea() {
                           {item.images &&
                             item.images.map((src, i) => (
                               <SwiperSlide key={i}>
-                                <Image src={src} alt="" />
+                                <Image src={src} alt="Blog slider image" title="Blog slider image" />
                               </SwiperSlide>
                             ))}
                         </Swiper>

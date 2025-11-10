@@ -58,9 +58,7 @@ const BlogDetailsPage = ({ params }: Props) => {
       <HeaderThree />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main>
-            <BlogDetailsClient params={params} />
-          </main>
+          <BlogDetailsClient params={params} />
           <FooterThree />
         </div>
       </div>

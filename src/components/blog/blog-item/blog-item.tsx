@@ -7,7 +7,7 @@ export default function BlogItem({ item }: { item: IBlogDT }) {
   return (
     <div className="tp-blog-item">
       <div className="tp-blog-thumb fix p-relative">
-        <Image src={item.img!} alt="blog-img" style={{ height: "auto" }} />
+        <Image src={item.img!} alt={`Blog post: ${item.title}`} title={`Blog post: ${item.title}`} style={{ height: "auto" }} />
         <div className="tp-blog-meta">
           <span>{item.date}</span>
         </div>

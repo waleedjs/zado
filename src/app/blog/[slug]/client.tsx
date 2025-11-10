@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { blog_data } from "@/data/blog-data";
 import BlogDetailsArea from "@/components/blog/details/blog-details-area";
 import { IBlogDT } from "@/types/blog-d-t";
+import useScrollSmooth from "@/hooks/use-scroll-smooth";
 
 interface Props {
   params: Promise<{
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const BlogDetailsClient = ({ params }: Props) => {
+  useScrollSmooth();
   const [blog, setBlog] = React.useState<IBlogDT | null>(null);
   const [loading, setLoading] = React.useState(true);
 
@@ -31,10 +33,20 @@ const BlogDetailsClient = ({ params }: Props) => {
   }, [params]);
 
   if (loading || !blog) {
-    return <div>Loading...</div>;
+    return (
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <div>Loading...</div>
+        </div>
+      </div>
+    );
   }
 
-  return <BlogDetailsArea blog={blog} />;
+  return (
+    <main>
+      <BlogDetailsArea blog={blog} />
+    </main>
+  );
 };
 
 export default BlogDetailsClient;

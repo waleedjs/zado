@@ -56,7 +56,7 @@ export default function ProjectTwo() {
             <div key={item.id} className="panel">
               <div className="tp-project-2-item  p-relative">
                 <div className="tp-project-2-thumb">
-                  <Image src={item.img} alt="p-img" width={900} height={500} />
+                  <Image src={item.img} alt={`${item.title} project showcase`} title={`${item.title} project showcase`} width={900} height={500} />
                 </div>
                 <div className="tp-project-2-content">
                   <span>{item.subtitle}</span>

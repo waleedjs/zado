@@ -14,19 +14,18 @@ const HeroBannerTwo = () => {
             <div className="tp-hero-2-wrapper-main">
               <div className="tp-hero-2-wrapper d-flex align-items-center p-relative " style={{ backgroundColor: '#b98847' }}>
                 <div className=" tp-gsap-bg tp-hero-bg-single">
-                  <Image src={hero_bg} alt="hero-bg" fill style={{ display: 'none' }} />
+                  <Image src={hero_bg} alt="hero-bg" title="about-hero-bg" fill style={{ display: 'none' }} />
                 </div>
                 <div className="tp-hero-2-content-wrap p-relative">
                   <div className="tp-hero-2-title-box">
-                    <h2 className="tp-hero-2-title text-1 z-index-5">
+                    <h1 className="tp-hero-2-title text-1 z-index-5">
                       About Us
-                    </h2>
+                    </h1>
                     
                   </div>
                   <div className="tp-hero-2-content">
                     <p>
-                      Empowering Your Business with Innovative Digital Marketing Strategies
-                      and Cutting-Edge Solutions to Drive Growth and Engagement.
+                     Creative solutions and digital strategies built to connect, captivate, and grow your business.
                     </p>
                     <div className="breadcrumb">
                       <div className="breadcrumb__list">

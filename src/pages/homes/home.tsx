@@ -8,7 +8,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderThree from "@/layouts/headers/header"; 
+import HeaderThree from "@/layouts/headers/header";
 import HeroBannerFour from "@/components/hero-banner/hero-banner-four";
 import GalleryOne from "@/components/gallery/gallery-one";
 import AboutThree from "@/components/about/about-three";
@@ -44,7 +44,6 @@ const HomeFourMain = () => {
 
   return (
     <Wrapper>
-
       {/* header area start */}
       <HeaderThree />
       {/* header area end */}
@@ -52,7 +51,6 @@ const HomeFourMain = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-
             {/* hero area start */}
             <HeroBannerFour />
             {/* hero area end */}
@@ -65,8 +63,35 @@ const HomeFourMain = () => {
             <AboutThree />
             {/* about area end */}
 
-            
-
+            {/* 2nd about section start */}
+            <div
+              className="ab-brand-area pt-120  black-bg-2"
+              style={{
+                backgroundImage: "url(/assets/img/inner-about/brand/brand-bg-shape.png)",
+              }}>
+              <div className="container">
+                <div className="row">
+                  <div className="col-xl-12">
+                    <div className="ab-brand-title-box">
+                      <h1 className="ab-brand-title">About Us</h1>
+                    </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <div>
+                    <div className="ab-brand-content tp_title_anim">
+                      <p>
+                        We are ZADO, a London-based creative studio that helps brands stand out, connect, and grow.
+                        Through thoughtful branding, digital design, and motion experiences, we turn ideas into
+                        experiences that feel effortless, meaningful, and memorable. Our work isn’t just about visuals —
+                        it’s about helping your brand make an impact and leave a lasting impression.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* 2nd about section end */}
 
             {/* project area start */}
             <ProjectFour />
@@ -83,7 +108,6 @@ const HomeFourMain = () => {
             {/* contact area start */}
             <ContactOne />
             {/* contact area end */}
-
           </main>
 
           {/* footer area */}

@@ -10,7 +10,7 @@ export default function FooterThree() {
   return (
     <footer>
 
-      <div className="tp-footer-4-area black-bg pt-70 pb-120" style={{ backgroundImage: "url(/assets/img/home-04/hero/overly.png)" }}>
+      <div className="tp-footer-4-area black-bg pt-70 pb-120" style={{ backgroundImage: "url(/assets/img/home-04/hero/overly.png)" }} role="img" aria-label="Footer background texture">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-12">
@@ -35,18 +35,18 @@ export default function FooterThree() {
           </div>
         </div>
       </div>
-      <div className="tp-footer-2-area black-bg pb-20" style={{ backgroundImage: "url(/assets/img/home-04/hero/overly.png)" }}>
+      <div className="tp-footer-2-area black-bg pb-20" style={{ backgroundImage: "url(/assets/img/home-04/hero/overly.png)" }} role="img" aria-label="Footer background texture">
         <div className="container container-1480">
           <div className="row">
             <div className="col-xl-3 col-lg-4 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-1">
                 <div className="tp-footer-2-widget-logo">
                   <Link href="/">
-                    <Image src={whiteLogo} alt="ZADO Logo" width={120} height={120} />
+                    <Image src={whiteLogo} alt="ZADO Logo" title="ZADO Digital Marketing Agency Logo" width={120} height={120} />
                   </Link>
                 </div>
                 <div className="tp-footer-2-widget-text">
-                  <p>Drop us a line sed id semper <br /> risus in hend rerit.</p>
+                  <p>Drop us a message and we’ll reach out to you. Let’s make something that stands out.</p>
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function FooterThree() {
           </div>
         </div>
       </div>
-      <div className="tp-copyright-2-area tp-copyright-2-bdr-top black-bg" style={{ backgroundImage: "url(/assets/img/home-04/hero/overly.png)" }}>
+      <div className="tp-copyright-2-area tp-copyright-2-bdr-top black-bg" style={{ backgroundImage: "url(/assets/img/home-04/hero/overly.png)" }} role="img" aria-label="Footer background texture">
         <div className="container container-1480">
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-5">

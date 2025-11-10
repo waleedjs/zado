@@ -54,11 +54,9 @@ const ServiceMain = () => {
                         <Leaf />
                         Services
                       </span>
-                      <h4 className="tp-service-5-title">
-                        We strongly believe that only design reinforced by{" "}
-                        <br />
-                        strategy can provide real results.
-                      </h4>
+                      <h1 className="tp-service-5-title">
+                        Good design needs more than just looks. At ZADO, we focus on work that actually makes a difference for your brand.
+                      </h1>
                     </div>
                   </div>
                 </div>

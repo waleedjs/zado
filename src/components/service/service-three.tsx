@@ -127,14 +127,14 @@ export default function ServiceThree() {
                 }}
               >
                 <div className="tp-service-4-icon">
-                  <Image style={{width:"auto", height:"auto"}} src={item.icon} alt="icon" />
+                  <Image style={{width:"auto", height:"auto"}} src={item.icon} alt={`${item.title} service icon`} title={`${item.title} service icon`} />
                 </div>
                 <div className="tp-service-4-content">
                   <h4 className="tp-service-4-title-sm">
-                    <Link href="/service">{item.title}</Link>
+                    <Link href="/contact">{item.title}</Link>
                   </h4>
                   <p>{item.subtitle}</p>
-                  <Link className="tp-service-4-link" href="/service">
+                  <Link className="tp-service-4-link" href="/contact">
                     Read more
                   </Link>
                 </div>

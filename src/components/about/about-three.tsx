@@ -25,11 +25,7 @@ export default function AboutThree() {
                 </span>
               </span>
               <h4 className="tp-section-title-90 tp_text_invert tp_fade_bottom">
-                We tell visual stories through smooth motions{" "}
-                <span>
-                  {" "}
-                  <br />& fluid Website
-                </span>
+                We Create Visual Stories With Purpose And Flow.
               </h4>
             </div>
           </div>
@@ -37,20 +33,18 @@ export default function AboutThree() {
         <div className="row align-items-center">
           <div className="col-xl-6 col-lg-6 col-md-4">
             <div className="tp-about-3-shape text-lg-end">
-              <Image src={shape} alt="shape" style={{ height: "auto" }} />
+              <Image src={shape} alt="About section decorative illustration" title="About section decorative illustration" style={{ height: "auto" }} />
             </div>
           </div>
           <div className="col-xl-6 col-lg-6 col-md-8">
             <div className="tp-about-3-content">
               <p className="mb-30 tp_fade_bottom">
-                We are a creative design studio based in London. We specialize
-                in Branding, and Web experiences for beauty.
+                ZADO is a London-based creative studio focused on branding, web design, and motion experiences. We help brands express their identity through design that feels seamless, fluid, and alive.
               </p>
               <p className="mb-45 tp_fade_bottom">
-                we’re all about digital experiences. The most creative idea and
-                the most perfect execution mean nothing.
+                For us, digital creativity isn’t just about ideas — it’s about making every interaction meaningful.
               </p>
-              <Link className="tp-btn-black-2 tp_fade_bottom" href="/about-us">
+              <Link className="tp-btn-black-2 tp_fade_bottom" href="/about">
                 About Us
                 <span className="p-relative">
                   <RightArrowTwo />

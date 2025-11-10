@@ -75,7 +75,8 @@ const HeaderMenus = () => {
                               <Image
                                 style={{ width: "auto", height: "auto" }}
                                 src={home_menu.img}
-                                alt="home-img"
+                                alt={`${home_menu.title} homepage preview`}
+                                title={`${home_menu.title} homepage preview`}
                                 width={250}
                                 height={235}
                                 className="rounded-lg"
@@ -173,7 +174,7 @@ const HeaderMenus = () => {
                             className="tp-shop-btn text-indigo-600 dark:text-indigo-400 hover:underline"
                             href="/shop"
                           >
-                            Shop Now
+                            Shop Now      
                           </Link>
                         </div>
                       </div>

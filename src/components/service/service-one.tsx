@@ -51,7 +51,7 @@ const ServiceOne = () => {
             </div>
 
             <div className="tp-service-left-btn tp-btn-bounce">
-              <Link className="tp-btn-border" href="/service">
+              <Link className="tp-btn-border" href="/contact">
                 <span className="tp-btn-border-wrap">
                   <span className="text-1">See All Services</span>
                   <span className="text-2">See All Services</span>
@@ -67,11 +67,11 @@ const ServiceOne = () => {
                   className="tp-service-item d-flex align-items-start mb-75 tp_fade_bottom"
                 >
                   <div className="tp-service-icon">
-                    <Image src={s.icon} alt="icon" style={{ height: "auto" }} />
+                    <Image src={s.icon} alt={`${s.title} service icon`} title={`${s.title} service icon`} style={{ height: "auto" }} />
                   </div>
                   <div className="tp-service-content">
                     <h4 className="tp-service-title-sm order-0">
-                      <Link href="/service-details">{s.title}</Link>
+                      <Link href="/contact">{s.title}</Link>
                     </h4>
                     <p className="order-1">{s.desc}</p>
                   </div>

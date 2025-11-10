@@ -10,19 +10,19 @@ const service_data = [
   {
     id: 1,
     title: "Branding",
-    desc: "Branding is one of the most important ingredients for the success of any business.",
+    desc: " Branding is what people remember about you. We help you figure out who you are, show what you stand for, and connect with the right audience.",
     icon: s_2,
   },
   {
     id: 2,
     title: "Website design",
-    desc: "The perfect cocktail should still look and taste perfect no matter the size of the glass you serve it in.",
+    desc: " A website shouldn’t just be pretty. We build sites that are simple, clean, and get the job done.",
     icon: s_1,
   },
   {
     id: 3,
     title: "Marketing",
-    desc: "We take that same approach with the apps & websites we create. you go there because of the overall experience.",
+    desc: " Whether it’s an app, a website, or a campaign, we aim to make every part of it catch attention and stick in people’s minds.",
     icon: s_3,
   },
 ];
@@ -36,11 +36,11 @@ export function ServiceItems() {
         <div key={item.id} className="col-xxl-3 col-xl-4 col-lg-4 col-md-6">
           <div className="tp-service-5-item tp_fade_bottom space-1">
             <div className="tp-service-4-icon">
-              <Image style={{ width: "auto", height: "auto" }} src={item.icon} alt="icon" />
+              <Image style={{ width: "auto", height: "auto" }} src={item.icon} alt={`${item.title} service icon`} title={`${item.title} service icon`} />
             </div>
             <div className="tp-service-4-content">
               <h4 className="tp-service-4-title-sm tp-text-black">
-                <Link href="/service">{item.title}</Link>
+                <Link href="/contact">{item.title}</Link>
               </h4>
               <p>{item.desc}</p>
             </div>

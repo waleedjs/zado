@@ -35,7 +35,7 @@ export default function BlogSidebar() {
     setSearchResults([]);
   };
   return (
-    <div className="sidebar__wrapper">
+    <div className="sidebar__wrapper" style={{ position: 'sticky', top: '100px' }}>
       <div className="sidebar__widget mb-65">
         <h3 className="sidebar__widget-title">Recent Post</h3>
         <div className="sidebar__widget-content">
@@ -110,21 +110,6 @@ export default function BlogSidebar() {
           </div>
         </div>
       )}
-      <div className="sidebar__widget mb-65">
-        <h3 className="sidebar__widget-title">Tags</h3>
-        <div className="sidebar__widget-content">
-          <div className="tagcloud">
-            <Link href="/blog?tag=creative">Creative</Link>
-            <Link href="/blog?tag=vision">Vision</Link>
-            <Link href="/blog?tag=popular">Popular</Link>
-            <Link href="/blog?tag=photography">Photography</Link>
-            <Link href="/blog?tag=lifestyle">Lifestyle</Link>
-            <Link href="/blog?tag=digital-marketing">Digital Marketing</Link>
-            <Link href="/blog?tag=branding">Branding</Link>
-            <Link href="/blog?tag=zado">ZADO</Link>
-          </div>
-        </div>
-      </div>
       
       <div className="sidebar__widget mb-65">
         <h3 className="sidebar__widget-title">Share Post</h3>

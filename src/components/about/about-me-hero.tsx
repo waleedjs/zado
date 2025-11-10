@@ -50,14 +50,16 @@ export default function AboutMeHero() {
                 <div className="ab-2-hero-shape-1">
                   <Image
                     src={shape_1}
-                    alt="shape"
+                    alt="About me hero decorative shape 1"
+                    title="About me hero decorative shape 1"
                   />
                 </div>
                 <div className="ab-2-hero-shape-2">
                   <Image
                     className="tp-zoom-in-out"
                     src={shape_2}
-                    alt="shape"
+                    alt="About me hero decorative shape 2"
+                    title="About me hero decorative shape 2"
                   />
                 </div>
               </div>
@@ -68,7 +70,8 @@ export default function AboutMeHero() {
               <div className="ab-2-hero-thumb-wrap p-relative">
                 <Image
                   src={hero_img}
-                  alt="shape"
+                  alt="About me hero portrait"
+                  title="About me hero portrait"
                   data-speed="0.9"
                   style={{height:"auto"}}
                 />

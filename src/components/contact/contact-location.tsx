@@ -51,7 +51,7 @@ const ContactLocation = () => {
                 <div className="col-xl-7">
                   <div className="cn-contact-left d-flex flex-wrap align-items-center">
                     <div className="cn-contact-info-thumb">
-                      <Image src={item.img} alt="image" style={{ height: "auto" }} />
+                      <Image src={item.img} alt={`${item.country} office location`} title={`${item.country} office location`} style={{ height: "auto" }} />
                     </div>
                     <div className="cn-contact-left-info">
                       <h4 className="cn-contact-left-title">{item.country}</h4>

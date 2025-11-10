@@ -31,8 +31,7 @@ const VideoTwo = () => {
                 </span>
                 <h2 className="tp-video-title">Success Stories</h2>
                 <p>
-                  Experience the power of effective digital marketing. {"Don't"}
-                  forget to put on your headphones for the full impact.
+                  Experience the impact of smart, data-driven marketing strategies that help brands stand out and perform.
                 </p>
               </div>
             </div>
