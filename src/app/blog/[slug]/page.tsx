@@ -26,20 +26,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${blog.title} | ZADO Digital Marketing Agency`,
-    description: blog.desc || `Read about ${blog.category} strategies and insights from ZADO Digital Marketing Agency.`,
-    keywords: `${blog.category}, digital marketing, ZADO, branding, business growth, marketing strategies`,
+    title: `How Responsive Design Impacts Brand Credibility and SEO | ZADO Digital Marketing Agency`,
+    description: "Discover how responsive design enhances brand credibility and boosts SEO performance in today's mobile-first digital landscape. Learn about mobile-first indexing, user experience, and Google ranking factors.",
+    keywords: "responsive design, mobile-first design, SEO, brand credibility, mobile optimization, web design, digital marketing, ZADO, Google ranking, user experience",
     openGraph: {
-      title: `${blog.title} | ZADO Digital Marketing Agency`,
-      description: blog.desc || `Read about ${blog.category} strategies and insights from ZADO Digital Marketing Agency.`,
+      title: `How Responsive Design Impacts Brand Credibility and SEO | ZADO Digital Marketing Agency`,
+      description: "Discover how responsive design enhances brand credibility and boosts SEO performance in today's mobile-first digital landscape. Learn about mobile-first indexing, user experience, and Google ranking factors.",
       type: 'article',
       publishedTime: blog.date,
       authors: ['ZADO Team'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${blog.title} | ZADO Digital Marketing Agency`,
-      description: blog.desc || `Read about ${blog.category} strategies and insights from ZADO Digital Marketing Agency.`,
+      title: `How Responsive Design Impacts Brand Credibility and SEO | ZADO Digital Marketing Agency`,
+      description: "Discover how responsive design enhances brand credibility and boosts SEO performance in today's mobile-first digital landscape. Learn about mobile-first indexing, user experience, and Google ranking factors.",
     },
   };
 }

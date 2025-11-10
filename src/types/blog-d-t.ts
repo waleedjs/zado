@@ -17,4 +17,7 @@ export interface IBlogDT {
   blogQuoteTwo?: boolean;
   blogHeroSlider?: boolean;
   desc?: string;
+  content?: string;
+  imgAlt?: string;
+  imgTitle?: string;
 }

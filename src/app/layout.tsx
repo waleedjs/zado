@@ -9,6 +9,7 @@ import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import "swiper/css/bundle";
 import "./globals.scss";
+import PageLoader from "@/components/page-loader";
 
 const gellery = localFont({
   src: [
@@ -87,6 +88,7 @@ export default function RootLayout({
       >
         <ThemeProvider defaultTheme="light">
           <VideoProvider>
+            <PageLoader />
             {children}
           </VideoProvider>
         </ThemeProvider>
