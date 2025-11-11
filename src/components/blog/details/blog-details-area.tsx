@@ -41,8 +41,7 @@ export default function BlogDetailsArea({ blog }: Props) {
                    style={{
                      width: "100%",
                      height: "400px",
-                     objectFit: "cover",
-                     borderRadius: "8px"
+                     objectFit: "cover"
                    }}
                    className="blog-featured-img d-none d-md-block"
                  />
@@ -55,8 +54,7 @@ export default function BlogDetailsArea({ blog }: Props) {
                    style={{
                      width: "100%",
                      height: "300px",
-                     objectFit: "cover",
-                     borderRadius: "8px"
+                     objectFit: "cover"
                    }}
                    className="blog-featured-img d-md-none"
                  />

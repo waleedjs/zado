@@ -61,7 +61,7 @@ export default function BlogSidebar() {
                     <span>{item.date}</span>
                   </div>
                   <h3 className="rc__post-title">
-                    <Link href={`/blog/${item.slug}`}>{item.title}</Link>
+                    <Link href={`/blog/${item.slug}`}>{item.title.length > 50 ? `${item.title.substring(0, 50)}...` : item.title}</Link>
                   </h3>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function BlogSidebar() {
                       <span>{item.date}</span>
                     </div>
                     <h3 className="rc__post-title">
-                      <Link href={`/blog/${item.slug}`}>{item.title}</Link>
+                      <Link href={`/blog/${item.slug}`}>{item.title.length > 50 ? `${item.title.substring(0, 50)}...` : item.title}</Link>
                     </h3>
                   </div>
                 </div>

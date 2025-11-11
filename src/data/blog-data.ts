@@ -11,16 +11,9 @@ const getCurrentDate = () => {
 };
 
 // blog images
-
-
-// blog modern
-import b_m_1 from "@/assets/img/inner-blog/blog-standard/blog-1.jpg";
-import b_m_2 from "@/assets/img/inner-blog/blog-standard/blog-2.jpg";
-import b_m_3 from "@/assets/img/inner-blog/blog-standard/blog-3.jpg";
-import b_m_4 from "@/assets/img/inner-blog/blog-standard/blog-4.jpg";
-import b_m_5 from "@/assets/img/inner-blog/blog-standard/blog-5.jpg";
-import b_m_6 from "@/assets/img/inner-blog/blog-standard/blog-6.jpg";
-import b_m_7 from "@/assets/img/inner-blog/blog-standard/blog-7.jpg";
+import blog_detail_1 from "@/assets/img/inner-blog/blog-details/blog-1.webp";
+import blog_detail_2 from "@/assets/img/inner-blog/blog-details/blog-2.webp";
+import blog_detail_3 from "@/assets/img/inner-blog/blog-details/blog-3.webp";
 
 
 
@@ -29,7 +22,7 @@ export const blog_modern: IBlogDT[] = [
   {
     id: 16,
     slug: "the-psychology-behind-great-logos-what-makes-people-remember-a-brand",
-    img: b_m_2,
+    img: blog_detail_1,
     title: 'The Psychology Behind Great Logos: What Makes People Remember a Brand',
     date: getCurrentDate(),
     category: 'Brand Design & Psychology',
@@ -65,7 +58,7 @@ export const blog_modern: IBlogDT[] = [
   {
     id: 15,
     slug: "how-responsive-design-impacts-brand-credibility-and-seo",
-    img: b_m_1,
+    img: blog_detail_2,
     title: 'How Responsive Design Impacts Brand Credibility and SEO',
     date: getCurrentDate(),
     category: 'Web Design & SEO',
@@ -140,7 +133,7 @@ export const blog_modern: IBlogDT[] = [
   {
     id: 14,
     slug: "why-rebranding-can-be-the-best-move-for-a-growing-business",
-    img: b_m_4,
+    img: blog_detail_3,
     title: 'Why Rebranding Can Be the Best Move for a Growing Business',
     date: getCurrentDate(),
     category: 'Brand Strategy & Growth',

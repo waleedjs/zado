@@ -15,7 +15,7 @@ export default function BlogItem({ item }: { item: IBlogDT }) {
           height={400}
           style={{
             width: "100%",
-            height: "400px",
+            height: "380px",
             objectFit: "cover",
           }}
           className="d-none d-md-block"
@@ -29,7 +29,7 @@ export default function BlogItem({ item }: { item: IBlogDT }) {
           style={{
             width: "100%",
             height: "300px",
-            objectFit: "cover",
+            objectFit: "contain",
           }}
           className="d-md-none"
         />
