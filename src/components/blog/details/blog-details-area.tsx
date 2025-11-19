@@ -8,6 +8,7 @@ import BlogDetailsNavigation from "./blog-details-navigation";
 import Link from "next/link";
 import { IBlogDT } from "@/types/blog-d-t";
 import { blog_data } from "@/data/blog-data";
+import { useTheme } from "next-themes";
 // import DOMPurify from 'isomorphic-dompurify';
 import styles from './blog-details-area.module.scss';
 
@@ -16,8 +17,10 @@ interface Props {
 }
 
 export default function BlogDetailsArea({ blog }: Props) {
-   const [showShareOptions, setShowShareOptions] = useState(false);
-   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+    const [showShareOptions, setShowShareOptions] = useState(false);
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+    const { theme } = useTheme();
+    const currentTheme = theme || (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
    const copyToClipboard = () => {
      navigator.clipboard.writeText(currentUrl);
@@ -61,7 +64,9 @@ export default function BlogDetailsArea({ blog }: Props) {
                </div>
 
                <div className="blog-details-left-content">
-                 <h1 className="blog-details-left-title">
+                 <h1
+                   className={`blog-details-left-title ${currentTheme === 'dark' ? 'theme-dark-heading' : 'theme-light-heading'}`}
+                 >
                    {blog.title}
                  </h1>
                  <p className="mb-20">
@@ -69,11 +74,11 @@ export default function BlogDetailsArea({ blog }: Props) {
                  </p>
                  {blog.content ? (
                    <div
-                     className={`${styles.blogContent} blog-content`}
+                     className={`${styles.blogContent} blog-content ${currentTheme === 'dark' ? 'dark-mode' : ''}`}
                      dangerouslySetInnerHTML={{
                        __html: blog.content.replace(/<a href="([^"]+)">([^<]+)<\/a>/g, (match, href, text) => {
                          return `<a href="${href}" target="_blank" rel="noopener noreferrer" style="color: #ff6b35; font-weight: 500; text-decoration: none;">${text}</a>`;
-                       })
+                       }).replace(/<h2>/g, `<h2 class="blog-details-left-title ${currentTheme === 'dark' ? 'theme-dark-heading' : 'theme-light-heading'}">`)
                      }}
                    />
                  ) : (

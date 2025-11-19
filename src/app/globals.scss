@@ -23,7 +23,7 @@
 
 .video-modal-iframe {
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   min-height: 500px;
   border: none;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -62,4 +62,19 @@
 .tp-footer-2-widget-logo img {
   width: 120px !important;
   height: 100% !important;
+}
+
+.play-video{
+  height: 600px !important;
+}
+
+/* Theme-aware blog headings */
+.theme-dark-heading {
+  color: white !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.theme-light-heading {
+  color: black !important;
+  transition: color 0.3s ease-in-out;
 }

@@ -35,7 +35,7 @@ export default function BlogSidebar() {
     setSearchResults([]);
   };
   return (
-    <div className="sidebar__wrapper" style={{ position: 'sticky', top: '100px' }}>
+    <div className="sidebar__wrapper sticky" style={{ position: 'sticky', top: '100px' }}>
       <div className="sidebar__widget mb-65">
         <h3 className="sidebar__widget-title">Recent Post</h3>
         <div className="sidebar__widget-content">
@@ -43,7 +43,7 @@ export default function BlogSidebar() {
             {rc_posts.map((item) => (
               <div
                 key={item.id}
-                className="rc__post mb-30 d-flex align-items-center"
+                className="rc__post mb-10 d-flex align-items-center"
               >
                 <div className="rc__post-thumb mr-20">
                   <Link href={`/blog/${item.slug}`}>

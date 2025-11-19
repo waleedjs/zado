@@ -26,20 +26,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `How Responsive Design Impacts Brand Credibility and SEO | ZADO Digital Marketing Agency`,
-    description: "Discover how responsive design enhances brand credibility and boosts SEO performance in today's mobile-first digital landscape. Learn about mobile-first indexing, user experience, and Google ranking factors.",
-    keywords: "responsive design, mobile-first design, SEO, brand credibility, mobile optimization, web design, digital marketing, ZADO, Google ranking, user experience",
+    title: `${blog.title} | ZADO Digital Marketing Agency`,
+    description: blog.desc,
+    keywords: `${blog.category}, ${blog.title}, digital marketing, ZADO, branding, web design, SEO`,
     openGraph: {
-      title: `How Responsive Design Impacts Brand Credibility and SEO | ZADO Digital Marketing Agency`,
-      description: "Discover how responsive design enhances brand credibility and boosts SEO performance in today's mobile-first digital landscape. Learn about mobile-first indexing, user experience, and Google ranking factors.",
+      title: `${blog.title} | ZADO Digital Marketing Agency`,
+      description: blog.desc,
       type: 'article',
       publishedTime: blog.date,
       authors: ['ZADO Team'],
+      images: [
+        {
+          url: blog.img?.src || '/default-blog-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: blog.imgAlt || blog.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `How Responsive Design Impacts Brand Credibility and SEO | ZADO Digital Marketing Agency`,
-      description: "Discover how responsive design enhances brand credibility and boosts SEO performance in today's mobile-first digital landscape. Learn about mobile-first indexing, user experience, and Google ranking factors.",
+      title: `${blog.title} | ZADO Digital Marketing Agency`,
+      description: blog.desc,
+      images: [
+        {
+          url: blog.img?.src || '/default-blog-image.jpg',
+          alt: blog.imgAlt || blog.title,
+        },
+      ],
     },
   };
 }

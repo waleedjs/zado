@@ -69,7 +69,7 @@ export const blog_modern: IBlogDT[] = [
     content: `
 <p>Most people don’t really use desktops anymore. Phones, tablets, even TVs—people just expect websites to work wherever they are. And they notice fast if something’s off.</p>
 <p>If your <a href="/services">site</a> doesn’t work on a phone—buttons too small, text hard to read, pictures cut off—it makes the whole <a href="/about">business</a> look sloppy. Doesn’t matter if your product is fantastic. People see the website first and make up their minds. That’s why responsive design isn’t optional. It’s just how sites need to be now.</p>
-<h2>First Impressions Count</h2>
+<h2 >First Impressions Count</h2>
 <p>Visitors decide in a few seconds if they’ll stay or leave. Menus that don’t work, tiny text, images overlapping, buttons you can’t tap—they leave. And it’s not just that they leave. They remember it. They assume you ignore details.</p>
 <p>A responsive site fixes that automatically. Layouts adjust, text becomes readable, images fit the screen, and everything works the way it should. People don’t have to think about it—they just feel like your <a href="/about">brand</a> knows what it’s doing.</p>
 <h2>Google Notices Too</h2>

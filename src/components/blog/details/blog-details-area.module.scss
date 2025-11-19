@@ -3,7 +3,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin: 2rem 0 1rem 0;
-    color: #333;
+    color: black;
   }
 
   h3 {
@@ -56,5 +56,11 @@
       color: #e55a2b;
       text-decoration: underline;
     }
+  }
+}
+
+.dark-mode {
+  h2 {
+    color: white;
   }
 }
