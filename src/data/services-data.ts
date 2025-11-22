@@ -1,8 +1,10 @@
-import ser_img_1 from "@/assets/img/inner-service/service/service-1.jpg";
-import web from "@/assets/img/inner-service/service/web.jpg";
-import ser_img_2 from "@/assets/img/inner-service/service/service-2.jpg";
-import ser_img_3 from "@/assets/img/inner-service/service/service-3.jpg";
-import ser_img_4 from "@/assets/img/inner-service/service/service-4.jpg";
+import ser_img_1 from "@/assets/img/inner-service/service/software-solution.webp";
+import ser_img_2 from "@/assets/img/inner-service/service/web.jpg";
+import ser_img_3 from "@/assets/img/inner-service/service/digital-marketing.webp";
+import ser_img_4 from "@/assets/img/inner-service/service/seo.webp";
+import ser_img_5 from "@/assets/img/inner-service/service/graphic-design.webp";
+import ser_img_6 from "@/assets/img/inner-service/service/email-marketing.webp";
+
 
 export interface IServiceData {
   id: number;
@@ -22,7 +24,7 @@ const services_data: IServiceData[] = [
   {
     id: 1,
     slug: "software-services",
-    img: ser_img_3,
+    img: ser_img_1,
     subtitle: "Development",
     title: "Software Services",
     text: "Custom software solutions tailored to your business needs. From enterprise applications to specialized tools, we build robust and scalable software.",
@@ -38,7 +40,7 @@ const services_data: IServiceData[] = [
   {
     id: 2,
     slug: "graphic-design",
-    img: ser_img_2,
+    img: ser_img_5,
     subtitle: "Design Studio",
     title: "Graphic Design",
     text: "Creative visual solutions that communicate your brand message effectively. From logos to marketing materials, we bring your vision to life.",
@@ -54,7 +56,7 @@ const services_data: IServiceData[] = [
   {
     id: 3,
     slug: "web-mobile-development",
-    img: web,
+    img: ser_img_2,
 
     subtitle: "Development",
     title: "Web & Mobile Development",
@@ -76,7 +78,7 @@ const services_data: IServiceData[] = [
   {
     id: 4,
     slug: "digital-marketing",
-    img: ser_img_4,
+    img: ser_img_3,
     subtitle: "Marketing",
     title: "Digital Marketing",
     text: "Comprehensive digital marketing strategies to grow your online presence and reach your target audience effectively.",
@@ -97,7 +99,7 @@ const services_data: IServiceData[] = [
   {
     id: 5,
     slug: "seo",
-    img: ser_img_1,
+    img: ser_img_4,
     subtitle: "Marketing",
     title: "SEO Services",
     text: "Optimize your website for search engines to increase visibility and drive organic traffic to your business.",
@@ -113,7 +115,7 @@ const services_data: IServiceData[] = [
   {
     id: 6,
     slug: "email-marketing",
-    img: ser_img_2,
+    img: ser_img_6,
     subtitle: "Marketing",
     title: "Email Marketing",
     text: "Effective email marketing campaigns that nurture leads, retain customers, and drive conversions.",
