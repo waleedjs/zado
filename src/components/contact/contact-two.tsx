@@ -7,14 +7,14 @@ import shape from "@/assets/img/inner-about/about/shape-1.png";
 export default function ContactTwo() {
   return (
     <div className="cn-contactform-area cn-contactform-style p-relative pb-100">
-      <div className="ab-2-hero-social-wrap d-none d-xl-block">
+      {/* <div className="ab-2-hero-social-wrap d-none d-xl-block">
         <div className="ab-2-hero-social">
           <Social/>
         </div>
         <div className="ab-2-hero-social-text">
           <span>Follow us</span>
         </div>
-      </div>
+      </div> */}
       <div className="container">
         <div className="row">
           <div className="col-xl-5">

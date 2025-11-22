@@ -74,13 +74,9 @@
 }
 .tp-service-2{
     &-area{
-        margin-top: 200px;
-        padding-bottom: 200px;
-        @media #{$xl,$lg,$md,$xs}{
-            margin-top: 0;
-        }
-        @media #{$sm}{
-            padding-bottom: 60px;
+        padding: 70px 0;
+        @media #{$xs}{
+            padding: 50px 0;
         }
     }
     &-shape-img{

@@ -64,10 +64,6 @@
   height: 100% !important;
 }
 
-.play-video{
-  height: 600px !important;
-}
-
 /* Theme-aware blog headings */
 .theme-dark-heading {
   color: white !important;
@@ -78,3 +74,12 @@
   color: black !important;
   transition: color 0.3s ease-in-out;
 }
+
+.tp-blog-title-sm{
+  font-size: 18px !important;
+}
+
+.tp-hero-2-wrapper {
+  height: 450px !important;
+}
+

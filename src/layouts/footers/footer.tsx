@@ -53,7 +53,7 @@ export default function FooterThree() {
             <div className="col-xl-2 col-lg-3 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-2">
                 <div className="tp-footer-2-widget-menu">
-                  <h4 className="tp-footer-2-widget-title">Sitemap</h4>
+                  <h4 className="tp-footer-2-widget-title">Pages</h4>
                   <ul>
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/about">About</Link></li>
@@ -68,13 +68,10 @@ export default function FooterThree() {
               <div className="tp-footer-2-widget footer-col-2-3">
                 <h4 className="tp-footer-2-widget-title">Office</h4>
                 <div className="tp-footer-2-contact-item">
-                  <span><Link href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu" target="_blank">740 NEW SOUTH HEAD RD, TRIPLE BAY SWFW 3108, NEW YORK</Link></span>
+                  <span>Mississauga Canada</span>
                 </div>
                 <div className="tp-footer-2-contact-item">
-                  <span><Link href="tel:+725214456">P: + 725 214 456</Link></span>
-                </div>
-                <div className="tp-footer-2-contact-item">
-                  <span><Link href="mailto:contact@zado.com">E: contact@zado.com</Link></span>
+                  <span><Link href="mailto:info@zado.com">Email: info@zado.com</Link></span>
                 </div>
               </div>
             </div>
@@ -104,13 +101,13 @@ export default function FooterThree() {
                 <p>All rights reserved — {new Date().getFullYear()} © zado</p>
               </div>
             </div>
-            <div className="col-xl-8 col-lg-7">
+            {/* <div className="col-xl-8 col-lg-7">
               <div className="tp-copyright-2-social text-center text-lg-end">
                 <Link className="mb-10" href="#">Linkedin</Link>
                 <Link className="mb-10" href="#">Twitter</Link>
                 <Link className="mb-10" href="#">Instagram</Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

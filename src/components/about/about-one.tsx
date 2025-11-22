@@ -9,7 +9,7 @@ import ab_3 from '@/assets/img/home-02/about/ab-s.webp';
 const AboutOne = () => {
 
   return (
-    <div className="tp-about-2-area pt-125 pb-200">
+    <div className="tp-about-2-area">
       <div className="container container-1480">
         <div className="row justify-content-center">
           <div className="col-xxl-8 col-xl-10">

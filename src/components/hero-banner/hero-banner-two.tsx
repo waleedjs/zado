@@ -12,7 +12,7 @@ const HeroBannerTwo = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="tp-hero-2-wrapper-main">
-              <div className="tp-hero-2-wrapper d-flex align-items-center p-relative " style={{ backgroundColor: '#b98847' }}>
+              <div className="tp-hero-2-wrapper d-flex align-items-center p-relative " style={{ backgroundColor: '#000000' }}>
                 <div className=" tp-gsap-bg tp-hero-bg-single">
                   <Image src={hero_bg} alt="hero-bg" title="about-hero-bg" fill style={{ display: 'none' }} />
                 </div>

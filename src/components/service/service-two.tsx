@@ -17,25 +17,25 @@ const service_accordion = [
     desc: " Build intuitive, user-friendly digital experiences. Our team crafts responsive websites and applications that not only look great but also deliver seamless functionality across all devices.",
   },
   {
-    id: 1,
+    id: 2,
     icon: ser_1,
     title: "SEO Optimization",
     desc: "Boost your online visibility and drive organic traffic with our expert SEO services. We implement proven strategies to improve your search engine rankings and attract qualified leads to your website.",
   },
   {
-    id: 2,
+    id: 3,
     icon: ser_2,
     title: "Social Media Marketing",
     desc: "Engage your audience and build brand loyalty through targeted social media campaigns. Our team creates compelling content and manages your social presence across all major platforms.",
   },
   {
-    id: 3,
+    id: 4,
     icon: ser_3,
     title: "Content Creation",
     desc: "Deliver valuable content that resonates with your audience. From blog posts and videos to infographics and email newsletters, we help you establish thought leadership in your industry.",
   },
   {
-    id: 4,
+    id: 5,
     icon: ser_4,
     title: "PPC Advertising",
     desc: "Maximize your ROI with data-driven pay-per-click campaigns. We optimize your ads across Google, Bing, and social platforms to ensure you're reaching the right audience at the right time.",
@@ -73,12 +73,13 @@ export default function ServiceTwo() {
                   <div key={s.id} className="accordion-items">
                     <h2 className="accordion-header">
                       <button
-                        className={`accordion-buttons ${s.id !== 1 ? "collapsed" : ""}`}
+                        className="accordion-buttons collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target={`#collapse-${s.id}`}
                         aria-expanded="false"
                         aria-controls={`collapse-${s.id}`}
+                        data-bs-parent="#accordionExample"
                       >
                         <span>
                           <Image src={s.icon} alt={`${s.title} service icon`} title={`${s.title} service icon`} />
@@ -89,7 +90,7 @@ export default function ServiceTwo() {
                     </h2>
                     <div
                       id={`collapse-${s.id}`}
-                      className={`accordion-collapse collapse ${s.id === 1 ? "show" : ""}`}
+                      className="accordion-collapse collapse"
                     >
                       <div className="accordion-body">
                         <p>{s.desc}</p>

@@ -1,5 +1,5 @@
 import ser_img_1 from "@/assets/img/inner-service/service/software-solution.webp";
-import ser_img_2 from "@/assets/img/inner-service/service/web.jpg";
+import ser_img_2 from "@/assets/img/inner-service/service/web.webp";
 import ser_img_3 from "@/assets/img/inner-service/service/digital-marketing.webp";
 import ser_img_4 from "@/assets/img/inner-service/service/seo.webp";
 import ser_img_5 from "@/assets/img/inner-service/service/graphic-design.webp";

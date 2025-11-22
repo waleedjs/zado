@@ -85,7 +85,9 @@ export default function HeaderThree() {
                           alignItems: 'center',
                           justifyContent: 'space-between',
                           padding: '0 10px',
-                          overflow: 'hidden'
+                          overflow: 'hidden',
+                          WebkitTapHighlightColor: 'transparent',
+                          outline: 'none'
                         }}
                         title={`Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`}
                         onMouseEnter={(e) => {
