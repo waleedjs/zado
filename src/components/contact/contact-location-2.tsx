@@ -23,13 +23,13 @@ const location_data = [
   },
   {
     id: 2,
-    country: "London",
+    country: "Ontario",
     img_1: c_img_3,
     img_2: c_img_4,
     map: "https://www.google.com/maps/@23.822356,90.3671947,15z?entry=ttu",
-    address: "86-90 Paul Street. London. EC2A 4NE, I-United Kingdom",
+    address: "123 Main Street, Ontario, Canada",
     phone: "(+91) 76001726",
-    email: "london@contact.com",
+    email: "ontario@contact.com",
   },
   {
     id: 3,

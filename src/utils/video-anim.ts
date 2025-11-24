@@ -37,9 +37,9 @@ function videoAnimTwo() {
 					pin: true,
 					markers: false,
 					scrub: 1,
-					pinSpacing: false,
-					end: "bottom 70%",
-					// endTrigger:".tp-service-2-area"
+					pinSpacing: true,
+					endTrigger: ".tp-service-2-area",
+					end: "top top"
 				}
 			});
 			tp_hero_2.to(".tp-video-wrap", {

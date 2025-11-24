@@ -39,7 +39,7 @@ export default function AboutThree() {
           <div className="col-xl-6 col-lg-6 col-md-8">
             <div className="tp-about-3-content">
               <p className="mb-30 tp_fade_bottom">
-                ZADO is a London-based creative studio focused on branding, web design, and motion experiences. We help brands express their identity through design that feels seamless, fluid, and alive.
+                ZADO is a Ontario-based creative studio focused on branding, web design, and motion experiences. We help brands express their identity through design that feels seamless, fluid, and alive.
               </p>
               <p className="mb-45 tp_fade_bottom">
                 For us, digital creativity isn’t just about ideas — it’s about making every interaction meaningful.

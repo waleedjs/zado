@@ -32,7 +32,8 @@ function panelOneAnimation() {
         scrollTrigger: {
           trigger: panelsContainer,
           pin: true,
-          start: "top 140",
+          pinSpacing: true,
+          start: "top top",
           scrub: 1,
           end: (st: any) => "+=" + (st.vars.trigger.offsetWidth - innerWidth),
         },
@@ -98,8 +99,8 @@ function studioPanel() {
       const panels = gsap.utils.toArray(".panels-container-2 .panel-2", thePanelsSection);
       const panelsContainer = thePanelsSection.querySelector(".panels-container-2");
 
-      gsap.set(panelsContainer, { height: window.innerHeight });
-      gsap.set(panels, { height: window.innerHeight });
+      gsap.set(panelsContainer, { height: '80vh' });
+      gsap.set(panels, { height: '80vh' });
 
       let totalPanelsWidth: any = 0;
       panels.forEach(function (panel: any) {
