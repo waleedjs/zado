@@ -71,7 +71,7 @@ const HomeFourMain = () => {
               }}>
               <div className="container">
                 <div className="row">
-                  <div className="col-xl-12">
+                    <div className="col-xl-12">
                     <div className="ab-brand-title-box">
                       <h1 className="ab-brand-title">About Us</h1>
                     </div>

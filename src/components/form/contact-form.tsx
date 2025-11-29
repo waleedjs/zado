@@ -8,13 +8,13 @@ import Loader from '../loader';
 
 type FormData = {
   name: string;
-  subject: string;
+  email: string;
   message: string;
 };
 
 const schema = yup.object().shape({
   name: yup.string().required().label("Name"),
-  subject: yup.string().required().label("subject"),
+  email: yup.string().email().required().label("Email"),
   message: yup.string().required().label("Message"),
 });
 
@@ -23,37 +23,46 @@ type IProps = {
   btnCls?:string;
 }
 export default function ContactForm({btnCls=''}:IProps) {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [result, setResult] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const {register,handleSubmit,reset,formState: { errors }} = useForm<FormData>({
     resolver: yupResolver(schema),
   });
   const onSubmit = handleSubmit(async (data:FormData) => {
     setIsLoading(true);
+    setResult("");
 
-    // Simulate form submission (replace with actual API call)
-    console.log('Form submitted:', data);
+    const formData = new FormData();
+    formData.append("access_key", "799e67bc-76f7-4554-b91c-19729e4f9d8a");
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("message", data.message);
 
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const responseData = await response.json();
 
     setIsLoading(false);
 
-    // Show success message
-    setIsSubmitted(true);
+    if (responseData.success) {
+      setResult("Success! Your message has been sent.");
+      reset();
+    } else {
+      setResult("Error: Something went wrong. Please try again.");
+    }
 
-    // Reset form
-    reset();
-
-    // Hide success message after 5 seconds
+    // Hide message after 5 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setResult("");
     }, 5000);
   });
   return (
     <>
-      {isSubmitted && (
-        <div className="alert alert-success mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
+      {result && (
+        <div className={`alert mb-4 p-3 rounded ${result.includes("Success") ? "bg-green-100 border border-green-400 text-green-700" : "bg-red-100 border border-red-400 text-red-700"}`}>
           Thank you for your message! We&apos;ll get back to you soon.
         </div>
       )}
@@ -65,8 +74,8 @@ export default function ContactForm({btnCls=''}:IProps) {
         </div>
         <div className="cn-contactform-input mb-25">
           <label>Email</label>
-          <input id='subject' {...register("subject")} type="text" placeholder="Your@email.com" />
-          <ErrorMsg msg={errors.subject?.message!} />
+          <input id='email' {...register("email")} type="email" placeholder="Your@email.com" />
+          <ErrorMsg msg={errors.email?.message!} />
         </div>
         <div className="cn-contactform-input mb-25">
           <label>Message</label>
