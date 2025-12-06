@@ -26,8 +26,8 @@ const project_data = [
     img_1: port_1,
     img_2: port_2,
     meta: "AUG 2025 . Creative",
-    title: "Fashion Industry Projects",
-    link: "https://dureshahwar.com/",
+    title: "Medical Industry Projects",
+    link: "https://frederickoakdental.ca/",
   },
   {
     id: 3,

@@ -33,7 +33,7 @@ export default function ContactForm({btnCls=''}:IProps) {
     setResult("");
 
     const formData = new FormData();
-    formData.append("access_key", "799e67bc-76f7-4554-b91c-19729e4f9d8a");
+    formData.append("access_key", "594b1d84-c2bf-40b2-9762-15c47bd36275");
     formData.append("name", data.name);
     formData.append("email", data.email);
     formData.append("message", data.message);

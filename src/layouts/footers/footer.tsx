@@ -1,12 +1,46 @@
 
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Image from 'next/image';
 import LineTextThree from '@/components/line-text/line-text-3';
 import whiteLogo from '@/assets/img/logo/Zado Final Logo Design White.png';
 import { RightArrow } from '@/components/svg';
 import Link from 'next/link';
+import Loader from '@/components/loader';
 
 export default function FooterThree() {
+  const [result, setResult] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setResult("");
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "594b1d84-c2bf-40b2-9762-15c47bd36275");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const responseData = await response.json();
+
+    setIsLoading(false);
+
+    if (responseData.success) {
+      setResult("Success! You've been subscribed to our newsletter.");
+      e.currentTarget.reset();
+    } else {
+      setResult("Error: Something went wrong. Please try again.");
+    }
+
+    setTimeout(() => {
+      setResult("");
+    }, 5000);
+  };
+
   return (
     <footer>
 
@@ -64,26 +98,37 @@ export default function FooterThree() {
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-5 col-md-6 mb-50">
+            <div className="col-xl-4 col-lg-5 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-3">
                 <h4 className="tp-footer-2-widget-title">Office</h4>
                 <div className="tp-footer-2-contact-item">
-                  <span>Mississauga Canada</span>
+                  <span className="text-lg">2255 Dundas Street West,<br />Suite 207 Mississauga, ON L5K 1R6</span>
                 </div>
                 <div className="tp-footer-2-contact-item">
-                  <span><Link href="mailto:info@zado.com">Email: info@zado.com</Link></span>
+                  <span className="text-sm"><Link href="mailto:info@zado.com">Email: info@zado.com</Link></span>
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-5 col-md-6 mb-50">
+            <div className="col-xl-3 col-lg-5 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-4">
                 <div className="tp-footer-2-widget-newslatter">
                   <h4 className="tp-footer-2-widget-title">Subscribe to our newsletter</h4>
-                  <form action="#">
+                  {result && (
+                    <div className={`alert mb-4 p-3 rounded ${result.includes("Success") ? "bg-green-100 border border-green-400 text-green-700" : "bg-red-100 border border-red-400 text-red-700"}`}>
+                      {result.includes("Success") ? "Thank you for subscribing! We'll keep you updated." : result}
+                    </div>
+                  )}
+                  <form onSubmit={onSubmit}>
                     <div className="tp-footer-2-input p-relative">
-                      <input type="text" placeholder="Enter your email..." />
-                      <button>
-                        <RightArrow />
+                      <input name="email" type="email" placeholder="Enter your email..." required />
+                      <button type="submit" disabled={isLoading}>
+                        {isLoading ? (
+                          <div className="flex items-center justify-center">
+                            <Loader size="sm" />
+                          </div>
+                        ) : (
+                          <RightArrow />
+                        )}
                       </button>
                     </div>
                   </form>

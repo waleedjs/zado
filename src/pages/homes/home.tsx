@@ -81,7 +81,7 @@ const HomeFourMain = () => {
                   <div>
                     <div className="ab-brand-content tp_title_anim">
                       <p>
-                        We are ZADO, a Ontario-based creative studio that helps brands stand out, connect, and grow.
+                        We are ZADO, a creative studio that helps brands stand out, connect, and grow.
                         Through thoughtful branding, digital design, and motion experiences, we turn ideas into
                         experiences that feel effortless, meaningful, and memorable. Our work isn’t just about visuals —
                         it’s about helping your brand make an impact and leave a lasting impression.
